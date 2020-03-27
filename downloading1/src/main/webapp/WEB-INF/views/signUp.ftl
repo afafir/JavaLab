@@ -10,6 +10,7 @@
         <input name="username" placeholder="username">
         <input name="email" placeholder="email">
         <input type="password" name="password" placeholder="password">
+        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
         <input type="submit" value="SignUp">
     </form>
 </div>

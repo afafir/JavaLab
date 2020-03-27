@@ -5,7 +5,7 @@
     <title>Title</title>
 </head>
 <body>
-<p>Dear user,</p>
-<p>Confirmation link: <a href=http://localhost:8080/activation?token=${link}>Сlick</a></p>
+This is admin page
+
 </body>
 </html>

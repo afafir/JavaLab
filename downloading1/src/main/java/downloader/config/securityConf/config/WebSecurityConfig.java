@@ -7,6 +7,7 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
@@ -25,11 +26,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-      //  super.configure(http);
-        http.csrf().disable();
+        //  super.configure(http);
         http.authorizeRequests()
-                .antMatchers("/signUp").not().authenticated()
-                .antMatchers("/profile").authenticated();
+                .antMatchers("/profile").authenticated()
+                .antMatchers("/admin").hasAuthority("ADMIN");
+        http.logout()
+                .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
+                .logoutSuccessUrl("/signIn");
 
         http.formLogin()
                 .loginPage("/signIn")
