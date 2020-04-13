@@ -1,8 +1,8 @@
-package coHelp.config.details;
+package coHelp.config.security.jwt.authentication;
 
-
+import coHelp.model.user.Role;
 import coHelp.model.user.State;
-import coHelp.model.user.User;
+import lombok.Builder;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -10,32 +10,28 @@ import org.springframework.security.core.userdetails.UserDetails;
 import java.util.Collection;
 import java.util.Collections;
 
+@Builder
 public class UserDetailsImpl implements UserDetails {
-    private User user;
 
-    public UserDetailsImpl(User user){
-        this.user = user;
-    }
-
-    public User getUser(){
-        return user;
-    }
+    private Long userId;
+    private Role role;
+    private String email;
+    private State state;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        String auth = user.getRole().toString();
-        SimpleGrantedAuthority authority = new SimpleGrantedAuthority(auth);
-        return Collections.singleton(authority);
+        SimpleGrantedAuthority authority = new SimpleGrantedAuthority(role.toString());
+        return Collections.singletonList(authority);
     }
 
     @Override
     public String getPassword() {
-        return user.getPassword();
+        return null;
     }
 
     @Override
     public String getUsername() {
-        return user.getEmail();
+        return this.email;
     }
 
     @Override
@@ -55,6 +51,10 @@ public class UserDetailsImpl implements UserDetails {
 
     @Override
     public boolean isEnabled() {
-        return user.getState().equals(State.CONFIRMED);
+        return state.equals(State.CONFIRMED);
+    }
+
+    public Long getUserId() {
+        return userId;
     }
 }

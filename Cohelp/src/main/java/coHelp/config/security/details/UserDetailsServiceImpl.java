@@ -1,7 +1,6 @@
-package coHelp.config.details;
+package coHelp.config.security.details;
 
 import coHelp.model.user.User;
-import coHelp.model.user.Volunteer;
 import coHelp.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;

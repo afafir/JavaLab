@@ -1,4 +1,4 @@
-package coHelp.config;
+package coHelp.config.security;
 import org.springframework.security.web.context.AbstractSecurityWebApplicationInitializer;
 
 public class SecurityWebApplicationInitializer extends AbstractSecurityWebApplicationInitializer {
