@@ -5,9 +5,9 @@ import coHelp.model.user.Volunteer;
 
 public interface TaskVolunteerService {
 
-    void acceptTask(Task task, Volunteer volunteer);
+    Task acceptTask(Task task, Long volunteerId);
 
-    void confirmTask(Task task);
+    Task confirmTask(Task task);
 
 
 }

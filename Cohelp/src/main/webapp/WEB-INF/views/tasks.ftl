@@ -1,5 +1,7 @@
 <!DOCTYPE html>
+
 <#assign  security=JspTaglibs["/WEB-INF/security.tld"] />
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -19,17 +21,17 @@
 </head>
 <body>
 <#include "header.ftl">
-<#list volunteers as volunteer>
+<#list tasks as task>
     <div class="row">
         <div class="card" style="width: 50%; margin: 0 auto">
             <img class="card-img-top" src="https://picsum.photos/200/150/?random" alt="Card image cap">
             <div class="card-body">
-                <h5 class="card-title">Волонтер</h5>
-                <p class="card-text">${volunteer.name} ${volunteer.surname}</p>
-                <a href="/profile/id${volunteer.id}" class="btn btn-primary">Подробнее</a>
+                <h5 class="card-title">${task.consumer.address.district} ${task.consumer.address.street}</h5>
+                <p class="card-text">${task.description}</p>
+                <a href="/task?id=${task.id}" class="btn btn-primary">Подробнее</a>
             </div>
         </div>
     </div>
-    </#list>
+</#list>
 </body>
 </html>

@@ -5,6 +5,6 @@ import coHelp.model.task.Task;
 
 public interface TaskConsumerService {
     Task createTask(TaskDto taskDto);
-    void acceptTask(Task task);
-    void rejectTask(Task task);
+    Task acceptTask(Task task);
+    Task rejectTask(Task task);
 }

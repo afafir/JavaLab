@@ -74,11 +74,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         //  super.configure(http);
 
       http.csrf().disable();
-        http.authorizeRequests()
-                .antMatchers("/profile").authenticated()
-                .antMatchers("/admin").hasAuthority("ADMIN")
-                .antMatchers("/signUp").permitAll()
-                .antMatchers("/createTask").hasAuthority("CONSUMER");
+        http.authorizeRequests();
         http.logout()
                 .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
                 .logoutSuccessUrl("/signIn");

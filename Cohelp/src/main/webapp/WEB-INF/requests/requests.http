@@ -1,0 +1,23 @@
+POST http://localhost:8080/rest/signIn
+Content-Type: application/json
+
+{
+  "email" : "tynbcx@gmail.com",
+  "password": "123"
+}
+
+
+###
+POST http://localhost:8080/rest/task/done/4
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiZW1haWwiOiJ0eW5iY3hAZ21haWwuY29tIiwic3RhdGUiOiJDT05GSVJNRUQiLCJyb2xlIjoiQ09OU1VNRVIifQ.1BlKQkxt_LJ8T8ffZPHoarUsTpkCO3fvKuX-KQ-BjUQ
+
+###
+GET http://localhost:8080/rest/profile
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiZW1haWwiOiJ0eW5iY3hAZ21haWwuY29tIiwic3RhdGUiOiJDT05GSVJNRUQiLCJyb2xlIjoiQ09OU1VNRVIifQ.1BlKQkxt_LJ8T8ffZPHoarUsTpkCO3fvKuX-KQ-BjUQ
+
+
+
+###
+
+###

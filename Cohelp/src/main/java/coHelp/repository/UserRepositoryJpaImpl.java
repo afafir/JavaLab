@@ -1,15 +1,10 @@
 package coHelp.repository;
 
-import coHelp.model.user.Role;
 import coHelp.model.user.User;
-import coHelp.model.user.Volunteer;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-import javax.persistence.PersistenceContextType;
-import javax.persistence.Query;
+import javax.persistence.*;
 import java.util.List;
 import java.util.Optional;
 
@@ -25,11 +20,13 @@ public class UserRepositoryJpaImpl implements UserRepository {
     @Override
     public Optional<User> findByEmail(String email) {
         Query query = entityManager.createNamedQuery("findByEmail").setParameter("email", email);
-        User user = (User) query.getSingleResult();
-        if (user != null) {
-            return Optional.of(user);
+        User user = null;
+        try {
+            user = (User) query.getSingleResult();
+        } catch (NoResultException nre) {
+            return Optional.empty();
         }
-        return Optional.empty();
+        return Optional.of(user);
     }
 
     @Transactional

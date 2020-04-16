@@ -1,7 +1,6 @@
 <#ftl encoding="utf-8">
 <#assign  security=JspTaglibs["/WEB-INF/security.tld"] />
 
-
 <!DOCTYPE html>
 
 <html lang="ru">

@@ -3,6 +3,7 @@ package coHelp.model.user;
 import coHelp.model.task.Task;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 
@@ -13,6 +14,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+@Data
 @SuperBuilder
 @Table(name="project_consumer", schema = "cohelp1")
 public class Consumer extends User implements Serializable {

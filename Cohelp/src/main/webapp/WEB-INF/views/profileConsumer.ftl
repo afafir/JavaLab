@@ -119,7 +119,7 @@
                         </#list>
                     </div>
                     <div class="tab-pane fade" id="request" role="tabpanel" aria-labelledby="request-tab">
-                    <form action="/createTask"  method="post">
+                    <form action="profile/create"  method="post">
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">Описание</label>
                             <div class="col-md-6">

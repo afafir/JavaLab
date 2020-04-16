@@ -50,7 +50,7 @@ public class VolunteerRepositoryJpaImpl implements VolunteerRepository {
     @Override
     public Optional<Volunteer> findByUser(User user) {
         //Query query = entityManager.createNamedQuery("findByUserVolunteer").setParameter("user", user);
-       // Volunteer volunteer = (Volunteer) query.getSingleResult();
+       // VolunteerDto volunteer = (VolunteerDto) query.getSingleResult();
         //if (volunteer != null){
         //    return Optional.of(volunteer);
         //}

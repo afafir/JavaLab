@@ -1,6 +1,7 @@
 package coHelp.model;
 
 import coHelp.model.user.User;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.*;
 
 import javax.persistence.*;
@@ -13,6 +14,7 @@ import javax.persistence.*;
 @Entity
 @ToString(exclude = "user")
 @Table(name = "project_address", schema = "cohelp1")
+@JsonIgnoreProperties( value = "user")
 public class Address {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

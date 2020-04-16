@@ -11,6 +11,7 @@ import java.util.Optional;
 
 public interface SignUpService {
     Mail createMail(Token token);
-    Mail signUp(SignUpDto dto);
+    boolean signUp(SignUpDto dto);
     Optional<User> activate(String token);
+    boolean isExist(User user);
 }

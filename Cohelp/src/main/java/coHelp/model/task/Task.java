@@ -2,6 +2,7 @@ package coHelp.model.task;
 
 import coHelp.model.user.Consumer;
 import coHelp.model.user.Volunteer;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.*;
 
 import javax.persistence.*;
@@ -12,6 +13,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Entity
 @Table(name = "project_task", schema = "cohelp1")
+@JsonIgnoreProperties (     value = {"consumer", "volunteer"})
 @ToString(exclude = {"consumer","volunteer"})
 @NamedQueries({
 @NamedQuery(

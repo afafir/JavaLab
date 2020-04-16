@@ -17,7 +17,7 @@ import javax.swing.text.html.Option;
 import java.util.Optional;
 
 @RestController
-public class TaskVolunteerController {
+public class TaskVolunteerRestController {
 
     @Autowired
     TaskVolunteerService taskVolunteerService;

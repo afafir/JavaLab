@@ -1,20 +1,16 @@
 package coHelp.contoller;
 
-import coHelp.config.details.UserDetailsImpl;
-import coHelp.dto.SignUpDto;
+import coHelp.config.security.details.UserDetailsImpl;
 import coHelp.dto.TaskDto;
 import coHelp.model.task.Task;
 import coHelp.model.user.User;
-import coHelp.model.user.Volunteer;
-import coHelp.repository.TaskRepository;
-import coHelp.repository.VolunteerRepository;
 import coHelp.service.TaskConsumerService;
 import coHelp.service.TaskService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -29,6 +25,7 @@ class TaskConsumerController {
     @Autowired
     TaskService taskService;
 
+    @PreAuthorize("hasAuthority('CONSUMER')")
     @RequestMapping(value = "/task/done", method = RequestMethod.POST)
     public String acceptTask(@RequestParam(value = "taskId") Long id, Authentication authentication) {
         User user =((UserDetailsImpl) authentication.getPrincipal()).getUser();
@@ -37,6 +34,7 @@ class TaskConsumerController {
         return "redirect:/task?id="+id;
     }
 
+    @PreAuthorize("hasAuthority('CONSUMER')")
     @RequestMapping(value = "/task/reject", method = RequestMethod.POST)
     public String confirmTask(@RequestParam(value = "taskId") Long id) {
         Task task = taskService.getTask(id).get();
@@ -44,6 +42,12 @@ class TaskConsumerController {
         return "redirect:/task?id="+id;
     }
 
+    @PreAuthorize("hasAuthority('CONSUMER')")
+    @RequestMapping(value = "/profile/create")
+    public String confirmTask(@RequestBody TaskDto taskDto){
+        Task task = taskConsumerService.createTask(taskDto);
+        return "redirect:/task?id="+task.getId();
+    }
 
 
 

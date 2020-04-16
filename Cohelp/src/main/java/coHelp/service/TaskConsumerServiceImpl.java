@@ -8,9 +8,8 @@ import coHelp.model.user.Consumer;
 import coHelp.repository.TaskRepository;
 import coHelp.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.AccessDeniedException;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 @Service
 public class TaskConsumerServiceImpl implements TaskConsumerService {
@@ -38,20 +37,21 @@ public class TaskConsumerServiceImpl implements TaskConsumerService {
         return taskRepository.save(task);
     }
 
-    public List<Task> getMyTasks(Consumer consumer){
-        return taskRepository.findForConsumer(consumer);
-    }
 
     @Override
-    public void acceptTask(Task task) {
+    public Task acceptTask(Task task) {
+        if (!task.getState().equals(State.CONFIRMED)){
+            throw new AccessDeniedException("improper state change");
+        }
         task.setState(State.DONE);
-        taskRepository.update(task);
+        return taskRepository.update(task);
 
     }
 
     @Override
-    public void rejectTask(Task task) {
+    public Task rejectTask(Task task) {
+        task.setVolunteer(null);
         task.setState(State.ACTIVE);
-        taskRepository.update(task);
+        return taskRepository.update(task);
     }
 }

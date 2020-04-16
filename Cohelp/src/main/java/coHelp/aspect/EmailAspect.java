@@ -23,7 +23,7 @@ public class EmailAspect {
     JavaMailSender sender;
 
 
-    @AfterReturning(value = "execution(* coHelp.service.SignUpService.signUp(..))", returning ="retVal")
+    @AfterReturning(value = "execution(* coHelp.service.SignUpService.createMail(..))", returning ="retVal")
     public void afterReturning(JoinPoint joinPoint, Object retVal)  {
         System.out.println(1);
         Mail toSend = (Mail) retVal;

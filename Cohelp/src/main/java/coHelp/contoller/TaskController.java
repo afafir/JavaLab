@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.List;
 import java.util.Optional;
 
 @Controller
@@ -19,6 +20,7 @@ public class TaskController {
 
     @Autowired
     private TaskService taskService;
+
     @ExceptionHandler(ResourceNotFoundException.class)
     public String handleResourceNotFoundException() {
         return "404";
@@ -33,6 +35,14 @@ public class TaskController {
         } else {
             throw new ResourceNotFoundException();
         }
+        return modelAndView;
+    }
+
+    @RequestMapping(value = "/tasks", method = RequestMethod.GET)
+    public ModelAndView getTasksPage() {
+        ModelAndView modelAndView = new ModelAndView("tasks");
+        List<Task> taskList = taskService.getActiveTasks();
+        modelAndView.addObject("tasks", taskList);
         return modelAndView;
     }
 

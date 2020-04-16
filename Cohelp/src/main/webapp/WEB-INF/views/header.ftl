@@ -2,7 +2,7 @@
 
 <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-warning">
-        <a class="navbar-brand" href="#"><img width="270px" height="80px" src="resources/img/var2.png" class="img-responsive" alt="Blockchain"></a>
+        <a class="navbar-brand" href="#"><img width="270px" height="80px" src="/resources/img/var2.png" class="img-responsive" alt="Blockchain"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -16,7 +16,7 @@
               <a class="nav-link" href="/volunteers"> Наши волонтеры</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#"> Мероприятия</a>
+              <a class="nav-link" href="/tasks"> Мероприятия</a>
             </li>
           </ul>
             <@security.authorize access="! isAuthenticated()">

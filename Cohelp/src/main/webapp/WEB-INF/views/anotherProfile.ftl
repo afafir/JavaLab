@@ -67,7 +67,7 @@
                                 <label>Должность</label>
                             </div>
                             <div class="col-md-6">
-                                <p>${user.role.toString()}</p>
+                                <p>${user..toString()}</p>
                         </div>
                     </div>
 

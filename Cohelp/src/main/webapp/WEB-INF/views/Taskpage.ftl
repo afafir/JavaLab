@@ -47,15 +47,16 @@
             <p>${task.description}</p>
             <h3 class="my-3">Детали Задания</h3>
             <ul>
-                <li>Заказачик - ${task.consumer.name} ${task.consumer.surname}</li>
+                <li>Заказачик - ${task.consumer.name} ${task.consumer.surname} <#if task.consumer.id==user.id> (это ваше задание)</#if></li>
                 <@security.authorize access=" isAuthenticated()">
-              <#if user.id==task.consumer.id>  <li>${task.consumer.phone}</li> </#if>
+              <#if user.id==task.consumer.id ||( (task.volunteer)??    && user.id == task.volunteer.id)>  <li>${task.consumer.phone}</li> </#if>
                 </@security.authorize>
                 <li>Адрес - ${task.consumer.address.city} ${task.consumer.address.district} ${task.consumer.address.street}</li>
                 <li>Состояние - ${task.state}</li>
             </ul>
 
             <@security.authorize access="hasAuthority('CONSUMER')">
+
                 <#if task.state == "CONFIRMED" && task.consumer.id==user.id>
                     <form action="/task/done" method="post">
                         <input type="hidden" name="taskId" value="${task.id}">
@@ -66,8 +67,9 @@
                         </div>
                     </form>
                 </#if>
+
                 <br>
-                <#if (task.state == "ACTIVE" || task.state =="DONE")&&task.consumer.id==user.id>
+                <#if (task.state == "IN_PROGRESS" || task.state =="CONFIRMED")&&task.consumer.id==user.id>
                     <form action="/task/reject" method="post">
                         <input type="hidden" name="taskId" value="${task.id}">
                         <div class="col-md-6 offset-md-4">
@@ -76,10 +78,18 @@
                             </button>
                         </div>
                     </form>
+                    <br>
+                    <br>
+                    <form action="/task/chat" method="get">
+                        <input type="hidden" name="id" value="${task.id}">
+                        <div class="col-md-6 offset-md-4">
+                            <button type="submit" class="btn btn-warning">
+                                К обсуждению
+                            </button>
+                        </div>
+                    </form>
                     </#if>
-
             </@security.authorize>
-
             <@security.authorize access="hasAuthority('VOLUNTEER')">
                 <#if task.state == "ACTIVE">
                     <form action="/task/accept" method="post">
@@ -92,6 +102,16 @@
                     </form>
                 </#if>
             <#if task.state == "IN_PROGRESS" && task.volunteer.id==user.id>
+                <form action="/task/chat" method="get">
+                    <input type="hidden" name="id" value="${task.id}">
+                    <div class="col-md-6 offset-md-4">
+                        <button type="submit" class="btn btn-warning">
+                            К обсуждению
+                        </button>
+                    </div>
+                </form>
+                <br>
+                <br>
             <form action="/task/confirm" method="post">
                 <input type="hidden" name="taskId" value="${task.id}">
                 <div class="col-md-6 offset-md-4">

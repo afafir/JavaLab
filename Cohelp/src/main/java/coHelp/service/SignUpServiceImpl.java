@@ -1,15 +1,19 @@
 package coHelp.service;
 
 import coHelp.dto.SignUpDto;
-import coHelp.model.*;
-import coHelp.model.user.*;
+import coHelp.model.Address;
+import coHelp.model.Mail;
+import coHelp.model.Token;
+import coHelp.model.user.Role;
+import coHelp.model.user.State;
+import coHelp.model.user.User;
 import coHelp.repository.TokenRepository;
 import coHelp.repository.UserRepository;
-import coHelp.repository.VolunteerRepository;
 import coHelp.util.MailPreparer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
@@ -25,9 +29,6 @@ public class SignUpServiceImpl implements SignUpService {
     UserRepository userRepository;
 
     @Autowired
-    VolunteerRepository volunteerRepository;
-
-    @Autowired
     private TokenRepository tokenRepository;
 
     @Autowired
@@ -37,12 +38,12 @@ public class SignUpServiceImpl implements SignUpService {
     private PasswordEncoder passwordEncoder;
 
     @Override
-    public Mail signUp(SignUpDto dto) {
+    public boolean signUp(SignUpDto dto) {
         Address address = Address.builder()
                 .city(dto.getCity())
                 .street(dto.getStreet())
                 .house(dto.getHouse())
-                .district(standartization.cleanAddress(dto.getCity()+ " "+dto.getStreet()+" "+dto.getHouse()).getCityDistrict())
+                .district(standartization.cleanAddress(dto.getCity() + " " + dto.getStreet() + " " + dto.getHouse()).getCityDistrict())
                 .build();
         User user = User.builder()
                 .address(address)
@@ -52,16 +53,21 @@ public class SignUpServiceImpl implements SignUpService {
                 .password(passwordEncoder.encode(dto.getPassword()))
                 .phone(dto.getTel())
                 .state(State.NOT_CONFIRMED)
-                .role(dto.getRole().equals("Волонтёр")? Role.VOLUNTEER : Role.CONSUMER)
+                .role(dto.getRole().equals("Волонтёр") ? Role.VOLUNTEER : Role.CONSUMER)
                 .build();
         if (user.getRole().equals(Role.VOLUNTEER)) {
             user = user.toVolunteer();
         } else user = user.toConsumer();
-        Token token = Token.builder()
-                .token(UUID.randomUUID().toString())
-                .user(user).build();
-        tokenRepository.save(token);
-        return createMail(token);
+        if (isExist(user)) {
+            return false;
+        } else {
+            Token token = Token.builder()
+                    .token(UUID.randomUUID().toString())
+                    .user(user).build();
+            tokenRepository.save(token);
+            createMail(token);
+            return true;
+        }
     }
 
 
@@ -83,12 +89,16 @@ public class SignUpServiceImpl implements SignUpService {
     @Override
     public Optional<User> activate(String token) {
         Optional<Token> toActivate = tokenRepository.findByToken(token);
-        if (toActivate.isPresent()){
+        if (toActivate.isPresent()) {
             User user = toActivate.get().getUser();
             user.setState(State.CONFIRMED);
             userRepository.update(user);
             return Optional.of(user);
-        }
-        else return Optional.empty();
+        } else return Optional.empty();
+    }
+
+    @Override
+    public boolean isExist(User user) {
+        return userRepository.findByEmail(user.getEmail()).isPresent();
     }
 }
