@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sockjs-client@1/dist/sockjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+
+    <script src="jlmq.js"></script>
+</head>
+<body onload="connect()">
+    <div id="tasks">
+    </div>
+            <ul id="completed_tasks">
+
+            </ul>
+    <div>
+        <div >
+            <label for="queue_name">Queue name</label>
+            <input type="text"  name="queue_name" id="queue_name">
+        </div>
+        <button type="button" onclick="subscribe()" class="btn btn-primary">Subscribe</button>
+    </div>
+    <div >
+        <div>
+            <label for="queue_send_name">Queue name</label>
+            <input type="text"  name="queue_send_name" id="queue_send_name">
+
+        </div>
+        <button type="button" onclick="sendTask()" class="btn btn-warning">Send new task</button>
+    </div>
+
+</body>
+</html>
