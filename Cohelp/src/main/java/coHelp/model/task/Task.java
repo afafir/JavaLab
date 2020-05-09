@@ -13,17 +13,17 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Entity
 @Table(name = "project_task", schema = "cohelp1")
-@JsonIgnoreProperties (     value = {"consumer", "volunteer"})
-@ToString(exclude = {"consumer","volunteer"})
+@JsonIgnoreProperties(value = {"consumer", "volunteer"})
+@ToString(exclude = {"consumer", "volunteer"})
 @NamedQueries({
-@NamedQuery(
-        name="findTasksForVolunteer",
-        query="SELECT task FROM Task task WHERE task.volunteer = :volunteer "
-),
-@NamedQuery(
-        name="findTasksForConsumer",
-        query="SELECT task FROM Task task WHERE task.consumer = :consumer "
-)})
+        @NamedQuery(
+                name = "findTasksForVolunteer",
+                query = "SELECT task FROM Task task WHERE task.volunteer = :volunteer "
+        ),
+        @NamedQuery(
+                name = "findTasksForConsumer",
+                query = "SELECT task FROM Task task WHERE task.consumer = :consumer "
+        )})
 
 public class Task {
     @Id
@@ -31,11 +31,11 @@ public class Task {
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name ="consumer_Id")
+    @JoinColumn(name = "consumer_Id")
     private Consumer consumer;
 
     @ManyToOne
-    @JoinColumn(name ="volunteer_Id")
+    @JoinColumn(name = "volunteer_Id")
     private Volunteer volunteer;
     @Enumerated(EnumType.STRING)
     private State state;

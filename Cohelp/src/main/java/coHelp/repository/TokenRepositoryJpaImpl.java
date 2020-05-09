@@ -9,8 +9,9 @@ import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 import java.util.List;
 import java.util.Optional;
+
 @Repository
-public class TokenRepositoryJpaImpl implements TokenRepository{
+public class TokenRepositoryJpaImpl implements TokenRepository {
 
     @PersistenceContext
     EntityManager entityManager;
@@ -25,6 +26,7 @@ public class TokenRepositoryJpaImpl implements TokenRepository{
     public List<Token> findAll() {
         return null;
     }
+
     @Transactional
     @Override
     public Token save(Token entity) {
@@ -46,7 +48,7 @@ public class TokenRepositoryJpaImpl implements TokenRepository{
     public Optional<Token> findByToken(String token) {
         Query query = entityManager.createNamedQuery("findByToken").setParameter("token", token);
         Token toReturn = (Token) query.getSingleResult();
-        if (toReturn != null){
+        if (toReturn != null) {
             return Optional.of(toReturn);
         }
         return Optional.empty();

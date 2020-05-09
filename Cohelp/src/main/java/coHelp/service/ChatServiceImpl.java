@@ -41,7 +41,7 @@ public class ChatServiceImpl implements ChatService {
         return chatRepository.findByTask(taskRepository.find(taskId).get()).get().
                 getMessageList()
                 .stream()
-                .map(x->new MessageDto(x.getSender().getName()+" "+x.getSender().getSurname(),x.getMessage()))
+                .map(x -> new MessageDto(x.getSender().getId(), x.getSender().getName() + " " + x.getSender().getSurname(),x.getMessage()))
                 .collect(Collectors.toList());
     }
 }

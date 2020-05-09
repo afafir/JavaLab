@@ -3,7 +3,7 @@
              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd">
     <persistence-unit name="coHelp">
         <class>coHelp.model.Address</class>
-    <class>coHelp.model.user.User</class>
+        <class>coHelp.model.user.User</class>
         <class>coHelp.model.task.Task</class>
         <class>coHelp.model.user.Volunteer</class>
         <class>coHelp.model.user.Consumer</class>

@@ -13,8 +13,8 @@ public class VolunteerController {
     VolunteerRepository volunteerRepository;
 
     @RequestMapping("/volunteers")
-    public String volunteersPage(Model model){
-        model.addAttribute("volunteers",volunteerRepository.findAll());
+    public String volunteersPage(Model model) {
+        model.addAttribute("volunteers", volunteerRepository.findAll());
         return "volunteers";
 
     }

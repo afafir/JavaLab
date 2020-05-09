@@ -14,8 +14,8 @@ import java.util.List;
 @Entity
 @Table(name = "project_chat", schema = "cohelp1")
 @NamedQuery(
-        name="findChatForTask",
-        query="SELECT chat FROM Chat chat WHERE chat.task = :task "
+        name = "findChatForTask",
+        query = "SELECT chat FROM Chat chat WHERE chat.task = :task "
 )
 @Scope("TaskScope")
 public class Chat {

@@ -10,10 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 class TaskConsumerController {
@@ -28,10 +25,10 @@ class TaskConsumerController {
     @PreAuthorize("hasAuthority('CONSUMER')")
     @RequestMapping(value = "/task/done", method = RequestMethod.POST)
     public String acceptTask(@RequestParam(value = "taskId") Long id, Authentication authentication) {
-        User user =((UserDetailsImpl) authentication.getPrincipal()).getUser();
+        User user = ((UserDetailsImpl) authentication.getPrincipal()).getUser();
         Task task = taskService.getTask(id).get();
         taskConsumerService.acceptTask(task);
-        return "redirect:/task?id="+id;
+        return "redirect:/task?id=" + id;
     }
 
     @PreAuthorize("hasAuthority('CONSUMER')")
@@ -39,19 +36,15 @@ class TaskConsumerController {
     public String confirmTask(@RequestParam(value = "taskId") Long id) {
         Task task = taskService.getTask(id).get();
         taskConsumerService.rejectTask(task);
-        return "redirect:/task?id="+id;
+        return "redirect:/task?id=" + id;
     }
 
     @PreAuthorize("hasAuthority('CONSUMER')")
     @RequestMapping(value = "/profile/create")
-    public String confirmTask(@RequestBody TaskDto taskDto){
+    public String createTask(@ModelAttribute TaskDto taskDto) {
         Task task = taskConsumerService.createTask(taskDto);
-        return "redirect:/task?id="+task.getId();
+        return "redirect:/task?id=" + task.getId();
     }
-
-
-
-
 
 
 }

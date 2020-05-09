@@ -13,10 +13,10 @@ import javax.persistence.*;
 @Data
 @Builder
 @Entity
-@Table(name="project_token", schema = "cohelp1")
+@Table(name = "project_token", schema = "cohelp1")
 @NamedQuery(
-        name="findByToken",
-        query="SELECT token FROM Token token WHERE token.token = :token "
+        name = "findByToken",
+        query = "SELECT token FROM Token token WHERE token.token = :token "
 )
 public class Token {
     @Id

@@ -18,23 +18,21 @@ public class SignUpController {
 
 
     @RequestMapping("/signUp")
-    public String mainPage(Authentication authentication){
-        if (authentication != null){
+    public String mainPage(Authentication authentication) {
+        if (authentication != null) {
             return "redirect:/profile";
         }
         return "signUp";
     }
 
 
-
-
     @RequestMapping(value = "/signUp", method = RequestMethod.POST)
     public String signUp(SignUpDto form) {
         form.setCity("Казань");
-        if (signUpService.signUp(form)){
+        if (signUpService.signUp(form)) {
             return "redirect:/signIn";
 
-        }else return "redirect:/signUp";
+        } else return "redirect:/signUp";
     }
 
 }

@@ -8,8 +8,8 @@ import java.util.List;
 
 public interface ChatService {
     void saveMessage(MessageDto message);
-    List<MessageDto> getAllMessages(Long chatId);
 
+    List<MessageDto> getAllMessages(Long chatId);
 
 
 }

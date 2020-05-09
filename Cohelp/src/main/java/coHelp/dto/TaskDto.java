@@ -15,9 +15,6 @@ import lombok.NoArgsConstructor;
 public class TaskDto {
     private String description;
     private String type;
-    private Long consumer;
-
-
-
+    private long consumer;
 
 }

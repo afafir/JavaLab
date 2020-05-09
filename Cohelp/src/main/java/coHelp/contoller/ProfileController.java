@@ -15,11 +15,13 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.context.annotation.RequestScope;
 
 import java.util.Optional;
 
 
 @Controller
+@RequestScope
 public class ProfileController {
 
     @Autowired
@@ -38,7 +40,6 @@ public class ProfileController {
         model.addAttribute("tasks", profileService.getMyTasks(user));
         return "profile";
     }
-
 
 
     @RequestMapping(value = "/profile/id{id}", method = RequestMethod.GET)

@@ -2,12 +2,10 @@ package coHelp.aspect;
 
 
 import coHelp.model.Mail;
-import coHelp.model.Token;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.Aspect;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Component;
@@ -23,8 +21,8 @@ public class EmailAspect {
     JavaMailSender sender;
 
 
-    @AfterReturning(value = "execution(* coHelp.service.SignUpService.createMail(..))", returning ="retVal")
-    public void afterReturning(JoinPoint joinPoint, Object retVal)  {
+    @AfterReturning(value = "execution(* coHelp.service.SignUpService.createMail(..))", returning = "retVal")
+    public void afterReturning(JoinPoint joinPoint, Object retVal) {
         System.out.println(1);
         Mail toSend = (Mail) retVal;
         MimeMessage message = sender.createMimeMessage();
@@ -42,10 +40,6 @@ public class EmailAspect {
             throw new IllegalStateException();
         }
     }
-
-
-
-
 
 
 }

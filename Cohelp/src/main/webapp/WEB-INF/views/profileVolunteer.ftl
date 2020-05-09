@@ -21,13 +21,16 @@
                     <p class="proile-rating">RANKINGS : <span>8/10</span></p>
                     <ul class="nav nav-tabs" id="myTab" role="tablist">
                         <li class="nav-item">
-                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true" color="black">About</a>
+                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
+                               aria-controls="home" aria-selected="true" color="black">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link"  id="current-tab" data-toggle="tab" href="#current" role="tab" aria-controls="profile" aria-selected="false" color="black">Текущие заявки</a>
+                            <a class="nav-link" id="current-tab" data-toggle="tab" href="#current" role="tab"
+                               aria-controls="profile" aria-selected="false" color="black">Текущие заявки</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link"  id="done-tab" data-toggle="tab" href="#done" role="tab" aria-controls="profile" aria-selected="false" color="black">Выполненные заявки</a>
+                            <a class="nav-link" id="done-tab" data-toggle="tab" href="#done" role="tab"
+                               aria-controls="profile" aria-selected="false" color="black">Выполненные заявки</a>
                         </li>
                     </ul>
                 </div>
@@ -76,7 +79,8 @@
                                 <label>Адрес ${user.xd}</label>
                             </div>
                             <div class="col-md-6">
-                                <p>Г. ${user.address.city}, район ${user.address.district}, ${user.address.street}, ${user.address.house}</p>
+                                <p>Г. ${user.address.city}, район ${user.address.district}, ${user.address.street}
+                                    , ${user.address.house}</p>
                             </div>
                         </div>
                     </div>
@@ -113,8 +117,8 @@
                         </#list>
                     </div>
 
-                    </div>
                 </div>
             </div>
         </div>
+</div>
 

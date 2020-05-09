@@ -12,5 +12,4 @@ public interface ProfileService {
     List<Task> getMyTasks(User user);
 
 
-
 }

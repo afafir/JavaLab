@@ -30,6 +30,6 @@
             </div>
         </div>
     </div>
-    </#list>
+</#list>
 </body>
 </html>

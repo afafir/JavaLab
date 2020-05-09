@@ -4,11 +4,12 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="resources/css/bootstrap.min.css">
-    <link rel="stylesheet" href="resources/css/bootstrap-grid.css">
-    <link rel="stylesheet" href="resources/css/bootstrap-reboot.css">
-    <link rel="stylesheet" href="resources/css/profile.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/resources/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/resources/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="/resources/css/bootstrap-reboot.css">
+    <link rel="stylesheet" href="/resources/css/profile.css">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
             integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
             crossorigin="anonymous"></script>
@@ -40,7 +41,8 @@
                     <p class="proile-rating">RANKINGS : <span>8/10</span></p>
                     <ul class="nav nav-tabs" id="myTab" role="tablist">
                         <li class="nav-item">
-                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true" color="black">About</a>
+                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
+                               aria-controls="home" aria-selected="true" color="black">About</a>
                         </li>
                     </ul>
                 </div>
@@ -67,32 +69,32 @@
                                 <label>Должность</label>
                             </div>
                             <div class="col-md-6">
-                                <p>${user..toString()}</p>
+                                <p>${user.role.toString()}</p>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Номер</label>
+                            </div>
+                            <div class="col-md-6">
+                                <p>${user.phone.substring(0, 4)}*****</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Адрес </label>
+                            </div>
+                            <div class="col-md-6">
+                                <p>Г. ${user.address.city}, район ${user.address.district},</p>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="row">
-                        <div class="col-md-6">
-                            <label>Номер</label>
-                        </div>
-                        <div class="col-md-6">
-                            <p>${user.phone}</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <label>Адрес </label>
-                        </div>
-                        <div class="col-md-6">
-                            <p>Г. ${user.address.city}, район ${user.address.district},</p>
-                        </div>
-                    </div>
                 </div>
 
-</div>
-
-</div>
-</div>
+            </div>
+        </div>
 </div>
 </body>
 </html>

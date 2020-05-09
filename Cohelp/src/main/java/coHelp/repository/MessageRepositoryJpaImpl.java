@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.persistence.*;
 import java.util.List;
 import java.util.Optional;
+
 @Repository
 public class MessageRepositoryJpaImpl implements MessageRepository {
 
@@ -22,7 +23,7 @@ public class MessageRepositoryJpaImpl implements MessageRepository {
     public Optional<Message> find(Long aLong) {
         Message message;
         try {
-            message=  entityManager.find(Message.class, aLong);
+            message = entityManager.find(Message.class, aLong);
         } catch (NoResultException nre) {
             return Optional.empty();
         }
@@ -34,12 +35,14 @@ public class MessageRepositoryJpaImpl implements MessageRepository {
     public List<Message> findAll() {
         return entityManager.createQuery("SELECT message FROM Message message", Message.class).getResultList();
     }
+
     @Transactional
     @Override
     public Message save(Message entity) {
         entityManager.persist(entity);
         return entity;
     }
+
     @Transactional
     @Override
     public Message update(Message entity) {

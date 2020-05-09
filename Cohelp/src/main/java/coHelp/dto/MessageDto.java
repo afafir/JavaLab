@@ -8,6 +8,7 @@ import lombok.*;
 @NoArgsConstructor
 @RequiredArgsConstructor
 public class MessageDto {
+    @NonNull
     Long senderId;
     @NonNull
     String sender;

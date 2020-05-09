@@ -10,6 +10,7 @@ import javax.persistence.PersistenceContext;
 import javax.persistence.PersistenceContextType;
 import java.util.List;
 import java.util.Optional;
+
 @Repository
 public class AddressRepositoryJpaImpl implements AddressRepository {
 
@@ -22,16 +23,19 @@ public class AddressRepositoryJpaImpl implements AddressRepository {
     public Optional<Address> findByUser(User user) {
         return Optional.empty();
     }
+
     @Transactional
     @Override
     public Optional<Address> find(Long aLong) {
         return Optional.empty();
     }
+
     @Transactional
     @Override
     public List<Address> findAll() {
         return null;
     }
+
     @Transactional
     @Override
     public Address save(Address entity) {

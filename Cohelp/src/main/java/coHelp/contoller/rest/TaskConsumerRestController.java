@@ -31,10 +31,10 @@ public class TaskConsumerRestController {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         UserDetailsImpl userDetails = (UserDetailsImpl) authentication.getPrincipal();
         Optional<Task> taskOptional = taskService.getTask(taskId);
-        if (taskOptional.isEmpty()){
+        if (taskOptional.isEmpty()) {
             return ResponseEntity.noContent().build();
         }
-        if (!taskOptional.get().getConsumer().getId().equals(userDetails.getUserId())){
+        if (!taskOptional.get().getConsumer().getId().equals(userDetails.getUserId())) {
             throw new AccessDeniedException("You cant update other user task");
         }
         return ResponseEntity.ok(taskConsumerService.acceptTask(taskOptional.get()));
@@ -46,20 +46,14 @@ public class TaskConsumerRestController {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         UserDetailsImpl userDetails = (UserDetailsImpl) authentication.getPrincipal();
         Optional<Task> taskOptional = taskService.getTask(taskId);
-        if (taskOptional.isEmpty()){
+        if (taskOptional.isEmpty()) {
             return ResponseEntity.noContent().build();
         }
-        if (!taskOptional.get().getConsumer().getId().equals(userDetails.getUserId())){
+        if (!taskOptional.get().getConsumer().getId().equals(userDetails.getUserId())) {
             throw new AccessDeniedException("You cant update other user task");
         }
         return ResponseEntity.ok(taskConsumerService.rejectTask(taskOptional.get()));
     }
-
-
-
-
-
-
 
 
 }

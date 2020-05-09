@@ -9,6 +9,7 @@ import javax.persistence.*;
 import javax.swing.text.html.Option;
 import java.util.List;
 import java.util.Optional;
+
 @Repository
 public class ChatRepositoryJpaImpl implements ChatRepository {
 
@@ -31,34 +32,39 @@ public class ChatRepositoryJpaImpl implements ChatRepository {
         }
         return Optional.of(chat);
     }
+
     @Transactional
     @Override
     public Optional<Chat> find(Long id) {
         Chat chat;
         try {
-            chat =  entityManager.find(Chat.class, id);
+            chat = entityManager.find(Chat.class, id);
         } catch (NoResultException nre) {
             return Optional.empty();
         }
         return Optional.of(chat);
     }
+
     @Transactional
     @Override
     public List<Chat> findAll() {
         return null;
     }
+
     @Transactional
     @Override
     public Chat save(Chat entity) {
         entityManager.persist(entity);
         return entity;
     }
+
     @Transactional
     @Override
     public Chat update(Chat entity) {
         entityManager.persist(entity);
         return entity;
     }
+
     @Transactional
     @Override
     public void delete(Long id) {

@@ -1,12 +1,11 @@
 package coHelp.config;
 
+import coHelp.model.Messages;
+import coHelp.model.Visitor;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.EnableAspectJAutoProxy;
-import org.springframework.context.annotation.PropertySource;
+import org.springframework.context.annotation.*;
 import org.springframework.core.env.Environment;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.instrument.classloading.InstrumentationLoadTimeWeaver;
@@ -23,6 +22,8 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
+import org.springframework.web.context.annotation.ApplicationScope;
+import org.springframework.web.context.annotation.SessionScope;
 import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer;
@@ -30,6 +31,7 @@ import org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
+import javax.servlet.http.HttpServletRequest;
 import javax.sql.DataSource;
 import java.util.Collections;
 import java.util.List;
@@ -70,7 +72,7 @@ public class ApplicationContextConfig {
         return entityManagerFactory;
     }
 
-@Bean
+    @Bean
     public Properties properties() {
         Properties properties = new Properties();
         properties.setProperty("hibernate.hbm2ddl.auto", "update");
@@ -131,7 +133,7 @@ public class ApplicationContextConfig {
         return viewResolver;
     }
 
-
+    @ApplicationScope
     @Bean(name = "multipartResolver")
     public CommonsMultipartResolver multipartResolver() {
         CommonsMultipartResolver multipartResolver = new CommonsMultipartResolver();
@@ -147,11 +149,21 @@ public class ApplicationContextConfig {
         return config;
     }
 
+    @ApplicationScope
     @Bean(name = "passwordEncoder")
     public PasswordEncoder getPasswordEncoder() {
         return new BCryptPasswordEncoder();
     }
 
+    @Bean
+    @SessionScope
+    public Visitor visitor(HttpServletRequest request){
+        return new Visitor(request.getRemoteAddr());
+    }
 
-
+    @Scope(scopeName = "task")
+    @Bean
+    public Messages foo() {
+        return new Messages();
+    }
 }

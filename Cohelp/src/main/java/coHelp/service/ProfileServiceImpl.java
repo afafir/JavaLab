@@ -18,7 +18,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class ProfileServiceImpl implements ProfileService{
+public class ProfileServiceImpl implements ProfileService {
 
     @Autowired
     UserRepository userRepository;
@@ -29,34 +29,34 @@ public class ProfileServiceImpl implements ProfileService{
     @Override
     public UserDto getProfile(Long id) {
         Optional<User> optionalUser = userRepository.find(id);
-        if (optionalUser.isPresent()){
+        if (optionalUser.isPresent()) {
             User user = optionalUser.get();
-        if (user.getRole().equals(Role.VOLUNTEER)) {
-            return VolunteerDto.builder()
-                    .tasks((((Volunteer)user).getTasks()))
+            if (user.getRole().equals(Role.VOLUNTEER)) {
+                return VolunteerDto.builder()
+                        .tasks((((Volunteer) user).getTasks()))
+                        .address(user.getAddress())
+                        .email(user.getEmail())
+                        .name(user.getName())
+                        .surname(user.getEmail())
+                        .phone(user.getPhone())
+                        .role(user.getRole())
+                        .build();
+            } else return ConsumerDto.builder()
+                    .tasks(((Consumer) user).getTasks())
                     .address(user.getAddress())
                     .email(user.getEmail())
                     .name(user.getName())
+                    .role(user.getRole())
                     .surname(user.getEmail())
                     .phone(user.getPhone())
-                    .role(user.getRole())
                     .build();
-        } else return ConsumerDto.builder()
-                .tasks(((Consumer)user).getTasks())
-                .address(user.getAddress())
-                .email(user.getEmail())
-                .name(user.getName())
-                .role(user.getRole())
-                .surname(user.getEmail())
-                .phone(user.getPhone())
-                .build();}
-        else throw  new NotFoundException("Such user doesnt exist");
+        } else throw new NotFoundException("Such user doesnt exist");
     }
 
     @Override
     public List<Task> getMyTasks(User user) {
 
-        if (user.getRole().equals(Role.VOLUNTEER)){
+        if (user.getRole().equals(Role.VOLUNTEER)) {
             return taskRepository.findForVolunteer((Volunteer) user);
         } else return taskRepository.findForConsumer((Consumer) user);
 

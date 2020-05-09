@@ -16,10 +16,8 @@ import java.util.List;
 @Entity
 @Data
 @SuperBuilder
-@Table(name="project_consumer", schema = "cohelp1")
+@Table(name = "project_consumer", schema = "cohelp1")
 public class Consumer extends User implements Serializable {
-
-
 
 
     @OneToMany(mappedBy = "consumer", cascade = CascadeType.ALL, fetch = FetchType.LAZY)

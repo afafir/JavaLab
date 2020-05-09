@@ -21,18 +21,18 @@ public class TaskConsumerServiceImpl implements TaskConsumerService {
 
     @Override
     public Task createTask(TaskDto taskDto) {
-            Task task = Task.builder().description(taskDto.getDescription()).state(State.ACTIVE).build();
-            switch (taskDto.getType()) {
-                case "walking":
-                    task.setType(Type.PET_WALKING);
-                    break;
-                case "products":
-                    task.setType(Type.PRODUCTS);
-                    break;
-                case "medicines":
-                    task.setType(Type.MEDICINES);
-                    break;
-            }
+        Task task = Task.builder().description(taskDto.getDescription()).state(State.ACTIVE).build();
+        switch (taskDto.getType()) {
+            case "walking":
+                task.setType(Type.PET_WALKING);
+                break;
+            case "products":
+                task.setType(Type.PRODUCTS);
+                break;
+            case "medicines":
+                task.setType(Type.MEDICINES);
+                break;
+        }
         task.setConsumer((Consumer) userRepository.find(taskDto.getConsumer()).get());
         return taskRepository.save(task);
     }
@@ -40,7 +40,7 @@ public class TaskConsumerServiceImpl implements TaskConsumerService {
 
     @Override
     public Task acceptTask(Task task) {
-        if (!task.getState().equals(State.CONFIRMED)){
+        if (!task.getState().equals(State.CONFIRMED)) {
             throw new AccessDeniedException("improper state change");
         }
         task.setState(State.DONE);

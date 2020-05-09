@@ -14,7 +14,7 @@ import javax.persistence.*;
 @Entity
 @ToString(exclude = "user")
 @Table(name = "project_address", schema = "cohelp1")
-@JsonIgnoreProperties( value = "user")
+@JsonIgnoreProperties(value = "user")
 public class Address {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,6 +23,6 @@ public class Address {
     private String street;
     private String district;
     private String house;
-    @OneToOne(mappedBy = "address", fetch = FetchType.EAGER, cascade = CascadeType.ALL  )
+    @OneToOne(mappedBy = "address", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private User user;
 }

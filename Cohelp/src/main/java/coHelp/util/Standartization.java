@@ -1,4 +1,4 @@
-package coHelp.service;
+package coHelp.util;
 
 
 import org.springframework.stereotype.Service;

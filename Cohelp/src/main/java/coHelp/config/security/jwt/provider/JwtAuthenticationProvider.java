@@ -28,7 +28,7 @@ public class JwtAuthenticationProvider implements AuthenticationProvider {
         Claims claims;
         try {
             // выполняю парсинг токена со своим секретным ключом
-            claims =  Jwts.parser().setSigningKey(secret).parseClaimsJws(token)
+            claims = Jwts.parser().setSigningKey(secret).parseClaimsJws(token)
                     .getBody();
         } catch (Exception e) {
             throw new AuthenticationCredentialsNotFoundException("Bad token");
@@ -43,7 +43,7 @@ public class JwtAuthenticationProvider implements AuthenticationProvider {
         // аутентификация прошла успешно
         authentication.setAuthenticated(true);
         // положили в эту аутентификацию пользователя
-        ((JwtAuthentication)authentication).setUserDetails(userDetails);
+        ((JwtAuthentication) authentication).setUserDetails(userDetails);
         return authentication;
 
     }

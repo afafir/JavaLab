@@ -1,6 +1,6 @@
 <#assign  security=JspTaglibs["/WEB-INF/security.tld"] />
 <@security.authorize access=" isAuthenticated()">
-<@security.authentication var="user" property="principal.user" />
+    <@security.authentication var="user" property="principal.user" />
 </@security.authorize>
 <!DOCTYPE html>
 <html lang="ru">
@@ -21,7 +21,7 @@
             integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
             crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/suggestions-jquery@20.2.3/dist/css/suggestions.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/suggestions-jquery@20.2.3/dist/css/suggestions.min.css" rel="stylesheet"/>
     <script src="https://cdn.jsdelivr.net/npm/suggestions-jquery@20.2.3/dist/js/jquery.suggestions.min.js"></script>
 
 
@@ -33,8 +33,8 @@
     <!-- Portfolio Item Heading -->
     <h1 class="my-4">Задание
         <small>${task.type}</small>
+        <small>${addr}</small>
     </h1>
-
     <!-- Portfolio Item Row -->
     <div class="row">
 
@@ -47,11 +47,14 @@
             <p>${task.description}</p>
             <h3 class="my-3">Детали Задания</h3>
             <ul>
-                <li>Заказачик - ${task.consumer.name} ${task.consumer.surname} <#if task.consumer.id==user.id> (это ваше задание)</#if></li>
+                <li>Заказачик
+                    - ${task.consumer.name} ${task.consumer.surname} <#if task.consumer.id==user.id> (это ваше задание)</#if></li>
                 <@security.authorize access=" isAuthenticated()">
-              <#if user.id==task.consumer.id ||( (task.volunteer)??    && user.id == task.volunteer.id)>  <li>${task.consumer.phone}</li> </#if>
+                    <#if user.id==task.consumer.id ||( (task.volunteer)??    && user.id == task.volunteer.id)>
+                        <li>${task.consumer.phone}</li> </#if>
                 </@security.authorize>
-                <li>Адрес - ${task.consumer.address.city} ${task.consumer.address.district} ${task.consumer.address.street}</li>
+                <li>Адрес
+                    - ${task.consumer.address.city} ${task.consumer.address.district} ${task.consumer.address.street}</li>
                 <li>Состояние - ${task.state}</li>
             </ul>
 
@@ -88,19 +91,19 @@
                             </button>
                         </div>
                     </form>
-                    </#if>
+                </#if>
             </@security.authorize>
             <@security.authorize access="hasAuthority('VOLUNTEER')">
-                <#if task.state == "ACTIVE">
-                    <form action="/task/accept" method="post">
-                        <input type="hidden" name="taskId" value="${task.id}">
-                        <div class="col-md-6 offset-md-4">
-                            <button type="submit" class="btn btn-warning">
-                                Взять задание
-                            </button>
-                        </div>
-                    </form>
-                </#if>
+            <#if task.state == "ACTIVE">
+                <form action="/task/accept" method="post">
+                    <input type="hidden" name="taskId" value="${task.id}">
+                    <div class="col-md-6 offset-md-4">
+                        <button type="submit" class="btn btn-warning">
+                            Взять задание
+                        </button>
+                    </div>
+                </form>
+            </#if>
             <#if task.state == "IN_PROGRESS" && task.volunteer.id==user.id>
                 <form action="/task/chat" method="get">
                     <input type="hidden" name="id" value="${task.id}">
@@ -112,14 +115,14 @@
                 </form>
                 <br>
                 <br>
-            <form action="/task/confirm" method="post">
-                <input type="hidden" name="taskId" value="${task.id}">
-                <div class="col-md-6 offset-md-4">
-                    <button type="submit" class="btn btn-warning">
-                        Завершить
-                    </button>
-                </div>
-            </form>
+                <form action="/task/confirm" method="post">
+                    <input type="hidden" name="taskId" value="${task.id}">
+                    <div class="col-md-6 offset-md-4">
+                        <button type="submit" class="btn btn-warning">
+                            Завершить
+                        </button>
+                    </div>
+                </form>
             </#if>
             </@security.authorize>>
         </div>

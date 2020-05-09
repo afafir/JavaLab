@@ -10,6 +10,7 @@ import coHelp.model.user.User;
 import coHelp.repository.TokenRepository;
 import coHelp.repository.UserRepository;
 import coHelp.util.MailPreparer;
+import coHelp.util.Standartization;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -21,6 +22,9 @@ import java.util.UUID;
 
 @Service
 public class SignUpServiceImpl implements SignUpService {
+    //чтобы работал аспект
+    @Autowired
+    SignUpService signUpService;
 
     @Autowired
     MailPreparer mailPreparer;
@@ -65,7 +69,9 @@ public class SignUpServiceImpl implements SignUpService {
                     .token(UUID.randomUUID().toString())
                     .user(user).build();
             tokenRepository.save(token);
-            createMail(token);
+
+            //чтобы работал аспект
+            signUpService.createMail(token);
             return true;
         }
     }

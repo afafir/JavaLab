@@ -11,9 +11,9 @@ import javax.persistence.PersistenceContextType;
 import javax.persistence.Query;
 import java.util.List;
 import java.util.Optional;
+
 @Repository
 public class VolunteerRepositoryJpaImpl implements VolunteerRepository {
-
 
 
     @PersistenceContext(type = PersistenceContextType.EXTENDED)
@@ -29,6 +29,7 @@ public class VolunteerRepositoryJpaImpl implements VolunteerRepository {
     public List<Volunteer> findAll() {
         return entityManager.createQuery("SELECT volunteer FROM Volunteer volunteer", Volunteer.class).getResultList();
     }
+
     @Transactional
     @Override
     public Volunteer save(Volunteer entity) {
@@ -50,7 +51,7 @@ public class VolunteerRepositoryJpaImpl implements VolunteerRepository {
     @Override
     public Optional<Volunteer> findByUser(User user) {
         //Query query = entityManager.createNamedQuery("findByUserVolunteer").setParameter("user", user);
-       // VolunteerDto volunteer = (VolunteerDto) query.getSingleResult();
+        // VolunteerDto volunteer = (VolunteerDto) query.getSingleResult();
         //if (volunteer != null){
         //    return Optional.of(volunteer);
         //}

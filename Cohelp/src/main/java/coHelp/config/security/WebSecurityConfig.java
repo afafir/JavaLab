@@ -1,5 +1,7 @@
 package coHelp.config.security;
 
+//import coHelp.filter.CustomFilter;
+import coHelp.filter.CustomFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.security.authentication.AuthenticationProvider;
@@ -17,7 +19,7 @@ import org.springframework.security.web.authentication.www.BasicAuthenticationFi
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 import org.springframework.web.filter.GenericFilterBean;
 
-    @EnableWebSecurity
+@EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
@@ -52,10 +54,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     }*/
 
 
-
-
-
-
     @Autowired
     private UserDetailsService userDetailsService;
 
@@ -73,7 +71,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         //  super.configure(http);
 
-      http.csrf().disable();
+        http.csrf().disable();
         http.authorizeRequests();
         http.logout()
                 .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
@@ -86,5 +84,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .defaultSuccessUrl("/profile")
                 .failureUrl("/signIn?error")
                 .permitAll();
+        //http.addFilterBefore(new CustomFilter(), BasicAuthenticationFilter.class);
     }
 }

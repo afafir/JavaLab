@@ -19,12 +19,11 @@ public class ProfileRestController {
 
     //@PreAuthorize("isAuthenticated()")
     @GetMapping("/rest/profile")
-    public ResponseEntity<UserDto> getProfile(){
+    public ResponseEntity<UserDto> getProfile() {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         UserDetailsImpl userDetails = (UserDetailsImpl) authentication.getPrincipal();
         return ResponseEntity.ok(profileService.getProfile(userDetails.getUserId()));
     }
-
 
 
 }

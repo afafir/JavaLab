@@ -18,6 +18,7 @@
     <script src="https://code.jquery.com/jquery-1.10.2.js"
             type="text/javascript"></script>
     <script src="/resources/js/chat.js"></script>
+    <script src></script>
 </head>
 <#include "header.ftl">
 <body onload="getAllMessages(${task.id})">
@@ -25,7 +26,8 @@
 <div>
     <input id="message" placeholder="Ваше сообщение">
     <button onclick="sendMessage('${user.id}','${user.name} ${user.surname}',
-            $('#message').val(),'${task.id}')">Отправить</button>
+            $('#message').val(),'${task.id}')">Отправить
+    </button>
 </div>
 <div>
     <ul id="messages">

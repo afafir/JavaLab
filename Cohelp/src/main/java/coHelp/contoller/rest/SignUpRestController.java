@@ -16,10 +16,10 @@ public class SignUpRestController {
     @Autowired
     private SignUpService signUpService;
 
-        @PreAuthorize("isAuthenticated().not")
-        @PostMapping(value = "/rest/signUp")
-        public ResponseEntity<Boolean> signIn(@RequestBody SignUpDto signUpData) {
-            return ResponseEntity.ok(signUpService.signUp(signUpData));
-        }
+    @PreAuthorize("isAuthenticated().not")
+    @PostMapping(value = "/rest/signUp")
+    public ResponseEntity<Boolean> signIn(@RequestBody SignUpDto signUpData) {
+        return ResponseEntity.ok(signUpService.signUp(signUpData));
+    }
 
 }

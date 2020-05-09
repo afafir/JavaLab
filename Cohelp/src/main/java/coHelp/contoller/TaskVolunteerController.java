@@ -17,19 +17,19 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class TaskVolunteerController {
 
- @Autowired
+    @Autowired
     TaskVolunteerService taskVolunteerService;
 
- @Autowired
+    @Autowired
     TaskService taskService;
 
     @PreAuthorize("hasAuthority('VOLUNTEER')")
     @RequestMapping(value = "/task/accept", method = RequestMethod.POST)
     public String acceptTask(@RequestParam(value = "taskId") Long id, Authentication authentication) {
-        User user =((UserDetailsImpl) authentication.getPrincipal()).getUser();
+        User user = ((UserDetailsImpl) authentication.getPrincipal()).getUser();
         Task task = taskService.getTask(id).get();
         taskVolunteerService.acceptTask(task, user.getId());
-        return "redirect:/task?id="+id;
+        return "redirect:/task?id=" + id;
     }
 
     @PreAuthorize("hasAuthority('VOLUNTEER')")
@@ -37,7 +37,7 @@ public class TaskVolunteerController {
     public String confirmTask(@RequestParam(value = "taskId") Long id) {
         Task task = taskService.getTask(id).get();
         taskVolunteerService.confirmTask(task);
-        return "redirect:/task?id="+id;
+        return "redirect:/task?id=" + id;
     }
 
 

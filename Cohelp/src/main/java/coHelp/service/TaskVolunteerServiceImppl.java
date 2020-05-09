@@ -12,7 +12,7 @@ import org.springframework.security.access.AccessDeniedException;
 import org.springframework.stereotype.Service;
 
 @Service
-public class TaskVolunteerServiceImppl implements TaskVolunteerService{
+public class TaskVolunteerServiceImppl implements TaskVolunteerService {
 
 
     @Autowired
@@ -21,21 +21,22 @@ public class TaskVolunteerServiceImppl implements TaskVolunteerService{
     UserRepository userRepository;
     @Autowired
     ChatRepository chatRepository;
+
     @Override
     public Task acceptTask(Task task, Long volunteerId) {
-        if (!task.getState().equals(State.ACTIVE)){
+        if (!task.getState().equals(State.ACTIVE)) {
             throw new AccessDeniedException("Improper state change");
         }
         task.setState(State.IN_PROGRESS);
         task.setVolunteer((Volunteer) userRepository.find(volunteerId).get());
         repository.update(task);
         chatRepository.save(Chat.builder().task(task).build());
-        return  task;
+        return task;
     }
 
     @Override
     public Task confirmTask(Task task) {
-        if (!task.getState().equals(State.IN_PROGRESS)){
+        if (!task.getState().equals(State.IN_PROGRESS)) {
             throw new AccessDeniedException("Improper state change");
         }
         task.setState(State.CONFIRMED);

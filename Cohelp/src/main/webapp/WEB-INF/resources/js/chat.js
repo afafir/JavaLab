@@ -1,4 +1,4 @@
-function sendMessage( senderId, sender, messsage, taskId) {
+function sendMessage(senderId, sender, messsage, taskId) {
     let body = {
         senderId: senderId,
         sender: sender,
@@ -26,7 +26,7 @@ function receiveMessage(taskId) {
         dataType: "json",
         contentType: "application/json",
         success: function (response) {
-            $('#messages').append('<li>' +response[0]['sender']+" "+response[0]['message'] + '</li>');
+            $('#messages').append('<li>' + response[0]['sender'] + " " + response[0]['message'] + '</li>');
             receiveMessage(taskId);
         }
     })
@@ -34,14 +34,14 @@ function receiveMessage(taskId) {
 
 function getAllMessages(taskId) {
     $.ajax({
-        url: "/allmessages?taskId="+taskId,
+        url: "/allmessages?taskId=" + taskId,
         method: "GET",
         dataType: "json",
         contentType: "application/json",
         success: function (response) {
             let html = "";
             response.forEach(function (messageDto) {
-                html += '<li>'+messageDto['sender']+" " + messageDto['message'] + '</li>';
+                html += '<li>' + messageDto['sender'] + " " + messageDto['message'] + '</li>';
             });
             $('#messages').html(html);
             receiveMessage(taskId);

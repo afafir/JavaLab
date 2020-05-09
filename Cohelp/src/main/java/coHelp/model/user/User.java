@@ -16,14 +16,13 @@ import javax.persistence.*;
 @Entity
 @Table(name = "project_user", schema = "cohelp1")
 @NamedQuery(
-        name="findByEmail",
-        query="SELECT user FROM User user WHERE user.email = :email "
+        name = "findByEmail",
+        query = "SELECT user FROM User user WHERE user.email = :email "
 )
 @Inheritance(
         strategy = InheritanceType.JOINED
 )
-public class User
-{
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -42,7 +41,7 @@ public class User
     @Enumerated(EnumType.STRING)
     private State state;
 
-    public Volunteer toVolunteer(){
+    public Volunteer toVolunteer() {
         return Volunteer.builder().address(this.address)
                 .email(this.email)
                 .password(password)
@@ -54,7 +53,7 @@ public class User
                 .state(state).build();
     }
 
-    public Consumer toConsumer(){
+    public Consumer toConsumer() {
         return Consumer.builder().address(this.address)
                 .email(this.email)
                 .password(password)

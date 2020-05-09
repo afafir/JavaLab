@@ -10,10 +10,11 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class SignInController {
 
+
     @RequestMapping("/signIn")
     public String mainPage(Authentication authentication) {
 
-        if (authentication !=null){
+        if (authentication != null) {
             return "redirect:/profile";
         }
         return "signIn";

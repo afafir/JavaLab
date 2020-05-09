@@ -30,12 +30,11 @@ public class TaskVolunteerRestController {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         UserDetailsImpl userDetails = (UserDetailsImpl) authentication.getPrincipal();
         Optional<Task> taskOptional = taskService.getTask(taskId);
-        if (taskOptional.isEmpty()){
+        if (taskOptional.isEmpty()) {
             return ResponseEntity.noContent().build();
         }
-        return ResponseEntity.ok(taskVolunteerService.acceptTask(taskOptional.get(),  userDetails.getUserId() ));
+        return ResponseEntity.ok(taskVolunteerService.acceptTask(taskOptional.get(), userDetails.getUserId()));
     }
-
 
 
     @RequestMapping(value = "/task/confirm/{taskId}", method = RequestMethod.PUT)
@@ -43,10 +42,10 @@ public class TaskVolunteerRestController {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         UserDetailsImpl userDetails = (UserDetailsImpl) authentication.getPrincipal();
         Optional<Task> task = taskService.getTask(id);
-        if (task.isEmpty()){
+        if (task.isEmpty()) {
             return ResponseEntity.noContent().build();
         }
-        if (!task.get().getVolunteer().getId().equals(userDetails.getUserId())){
+        if (!task.get().getVolunteer().getId().equals(userDetails.getUserId())) {
             throw new AccessDeniedException("You cant update other user tasks");
         }
         return ResponseEntity.ok(task.get());

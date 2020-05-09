@@ -9,7 +9,7 @@ public class RootController {
 
 
     @RequestMapping("/")
-    public ModelAndView mainPage(){
+    public ModelAndView mainPage() {
         return new ModelAndView("index");
     }
 

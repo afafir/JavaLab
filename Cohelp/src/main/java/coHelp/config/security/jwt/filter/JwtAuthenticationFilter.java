@@ -12,12 +12,13 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
+
 @Component("jwtAuthenticationFilter")
-public class JwtAuthenticationFilter extends GenericFilterBean{
+public class JwtAuthenticationFilter extends GenericFilterBean {
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse response, FilterChain chain) throws IOException, ServletException {
         // преобразуем запрос в HTTP
-        HttpServletRequest request = (HttpServletRequest)servletRequest;
+        HttpServletRequest request = (HttpServletRequest) servletRequest;
         // получаем токен
         String token = request.getHeader("Authorization");
         // создаем объект аутентификации
