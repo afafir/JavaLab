@@ -24,5 +24,6 @@ public class UserDto {
     private String phone;
     private Role role;
     private Address address;
+    private String avatarLink;
 
 }

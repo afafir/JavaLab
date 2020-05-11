@@ -1,6 +1,7 @@
 package coHelp.model.user;
 
 import coHelp.model.Address;
+import coHelp.model.document.Avatar;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -41,6 +42,9 @@ public class User {
     @Enumerated(EnumType.STRING)
     private State state;
 
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "id_avatar")
+    private Avatar avatar;
     public Volunteer toVolunteer() {
         return Volunteer.builder().address(this.address)
                 .email(this.email)

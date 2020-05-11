@@ -2,11 +2,15 @@
     <div class="row">
         <div class="col-md-4">
             <div class="profile-img">
-                <img src="https://sun9-68.userapi.com/c206524/v206524703/cacf8/Z54zEK3QNmw.jpg" alt=""/>
-                <div class="file btn btn-lg btn-primary">
-                    Change Photo
-                    <input type="file" name="file"/>
-                </div>
+
+                <img src="" alt=""/>
+            </div>
+            <div class="file btn btn-lg btn-primary">
+                Change Photo
+                <input type="file" id="file" name="file"/>
+                <button onclick="sendFile()">
+                    load file
+                </button>
             </div>
         </div>
         <div class="col-md-6">
@@ -86,7 +90,7 @@
                     </div>
                 </div>
                 <div class="tab-pane fade" id="active" role="tabpanel" aria-labelledby="active-tab">
-                    <#list tasks as task>
+                    <#list user.tasks as task>
                         <#if task.state == "ACTIVE">
                             <div class="row">
                                 <div class="card" style="width: 18rem;">
@@ -102,7 +106,7 @@
                     </#list>
                 </div>
                 <div class="tab-pane fade" id="in_progress" role="tabpanel" aria-labelledby="in_progress-tab">
-                    <#list tasks as task>
+                    <#list user.tasks as task>
                         <#if task.state == "IN_PROGRESS">
                             <div class="row">
                                 <div class="card" style="width: 18rem;">

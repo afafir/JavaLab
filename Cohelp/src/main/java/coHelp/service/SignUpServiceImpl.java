@@ -56,7 +56,7 @@ public class SignUpServiceImpl implements SignUpService {
                 .email(dto.getEmail())
                 .password(passwordEncoder.encode(dto.getPassword()))
                 .phone(dto.getTel())
-                .state(State.NOT_CONFIRMED)
+                .state(State.CONFIRMED)
                 .role(dto.getRole().equals("Волонтёр") ? Role.VOLUNTEER : Role.CONSUMER)
                 .build();
         if (user.getRole().equals(Role.VOLUNTEER)) {

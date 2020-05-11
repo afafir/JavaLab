@@ -2,9 +2,13 @@ package coHelp.config;
 
 import coHelp.model.Messages;
 import coHelp.model.Visitor;
+import coHelp.scope.BeanFactory;
+import coHelp.scope.TaskText;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.config.BeanFactoryPostProcessor;
 import org.springframework.context.annotation.*;
 import org.springframework.core.env.Environment;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
@@ -53,6 +57,10 @@ public class ApplicationContextConfig {
         return new JdbcTemplate(dataSource());
     }
 
+    @Bean
+    public ObjectMapper objectMapper(){
+        return new ObjectMapper();
+    }
     @Bean
     public PlatformTransactionManager transactionManager(EntityManagerFactory entityManagerFactory) {
         JpaTransactionManager transactionManager = new JpaTransactionManager();
@@ -163,7 +171,19 @@ public class ApplicationContextConfig {
 
     @Scope(scopeName = "task")
     @Bean
-    public Messages foo() {
-        return new Messages();
+    public TaskText task(){
+        return new TaskText();
+    }
+
+    @Scope(scopeName = "task")
+    @Bean
+    public TaskText task1(){
+        return new TaskText();
+    }
+
+
+    @Bean
+    public static BeanFactoryPostProcessor beanFactoryPostProcessor() {
+        return new BeanFactory();
     }
 }

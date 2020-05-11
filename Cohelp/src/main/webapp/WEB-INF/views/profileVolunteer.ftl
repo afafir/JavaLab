@@ -1,14 +1,16 @@
 <div class="container emp-profile">
-    <form method="post">
         <div class="row">
             <div class="col-md-4">
                 <div class="profile-img">
-                    <img src="https://sun9-68.userapi.com/c206524/v206524703/cacf8/Z54zEK3QNmw.jpg" alt=""/>
-                    <div class="file btn btn-lg btn-primary">
-                        Change Photo
-                        <input type="file" name="file"/>
-                    </div>
+                    <img src="${user.avatarLink}" alt=""/>
                 </div>
+            </div>
+            <div class="file btn btn-lg btn-primary">
+                Change Photo
+                <input type="file" id="file" name="file"/>
+                <button onclick="sendFile()">
+                    load file
+                </button>
             </div>
             <div class="col-md-6">
                 <div class="profile-head">
@@ -76,7 +78,7 @@
                         </div>
                         <div class="row">
                             <div class="col-md-6">
-                                <label>Адрес ${user.xd}</label>
+                                <label>Адрес</label>
                             </div>
                             <div class="col-md-6">
                                 <p>Г. ${user.address.city}, район ${user.address.district}, ${user.address.street}
@@ -85,7 +87,7 @@
                         </div>
                     </div>
                     <div class="tab-pane fade" id="current" role="tabpanel" aria-labelledby="current-tab">
-                        <#list tasks as task>
+                        <#list user.tasks as task>
                             <#if task.state == "IN_PROGRESS">
                                 <div class="row">
                                     <div class="card" style="width: 18rem;">
@@ -101,8 +103,8 @@
                         </#list>
                     </div>
                     <div class="tab-pane fade" id="done" role="tabpanel" aria-labelledby="done-tab">
-                        <#list tasks as task>
-                            <#if task.state == "IN_P">
+                        <#list user.tasks as task>
+                            <#if task.state == "IN_PROGRESS">
                                 <div class="row">
                                     <div class="card" style="width: 18rem;">
                                         <img class="card-img-top" src="..." alt="Card image cap">

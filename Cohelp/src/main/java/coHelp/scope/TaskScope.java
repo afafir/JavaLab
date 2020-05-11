@@ -5,6 +5,7 @@ import org.springframework.beans.factory.ObjectFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.Scope;
 import org.springframework.context.ApplicationContext;
+import org.springframework.security.core.Authentication;
 
 import javax.mail.Session;
 import java.util.HashMap;
@@ -12,26 +13,24 @@ import java.util.Map;
 
 public class TaskScope implements Scope {
 
-    @Autowired
-    public UserDetailsImpl userDetails;
-    public static Map<Long, Map<Long, Object>> objects = new HashMap<>();
+    //Map<String, Map<Long, Object>> objectMap = new HashMap<>();
+
+    Map<String, Object> objectMap = new HashMap<>();
+
 
 
     @Override
     public Object get(String s, ObjectFactory<?> objectFactory) {
-        if(objects.containsKey(Long.valueOf(s))){
-            objects.put(Long.valueOf(s),new HashMap<>());
-        }
-        if (!objects.get(Long.valueOf(s)).containsKey(userDetails.getUserId())){
-            objects.get(Long.valueOf(s)).put(userDetails.getUserId(), objectFactory.getObject());
+        if(!objectMap.containsKey(s)) {
+            objectMap.put(s, objectFactory.getObject());
         }
 
-        return objects.get(Long.valueOf(s)).get(userDetails.getUserId());
+        return objectMap.get(s);
     }
 
     @Override
     public Object remove(String s) {
-        return null;
+        return objectMap.remove(s);
     }
 
     @Override
@@ -46,6 +45,6 @@ public class TaskScope implements Scope {
 
     @Override
     public String getConversationId() {
-        return null;
+        return "user";
     }
 }

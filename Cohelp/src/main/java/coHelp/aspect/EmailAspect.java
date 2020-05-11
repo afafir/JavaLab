@@ -23,7 +23,6 @@ public class EmailAspect {
 
     @AfterReturning(value = "execution(* coHelp.service.SignUpService.createMail(..))", returning = "retVal")
     public void afterReturning(JoinPoint joinPoint, Object retVal) {
-        System.out.println(1);
         Mail toSend = (Mail) retVal;
         MimeMessage message = sender.createMimeMessage();
         MimeMessageHelper helper;

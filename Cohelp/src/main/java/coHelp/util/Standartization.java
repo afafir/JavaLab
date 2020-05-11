@@ -11,8 +11,8 @@ import ru.redcom.lib.integration.api.client.dadata.dto.Address;
 @Service
 public class Standartization {
 
-    private static final String API_KEY = "25be1c14037092d11a6c81203e67e220b9a475d6";
-    private static final String SECRET_KEY = "cd533dee38fe4a5e3e845cb3a41d45374d637122";
+    private static final String API_KEY = "7f7054b12802b7111e7a0d4c82df2590a50f4b03";
+    private static final String SECRET_KEY = "d295db294039860478194298c10850b552676ec3";
     private final DaDataClient dadata = DaDataClientFactory.getInstance(API_KEY, SECRET_KEY);
 
     public Address cleanAddress(final String source) throws DaDataException {

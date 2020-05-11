@@ -27,7 +27,7 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="profile-img">
-                    <img src="https://sun9-68.userapi.com/c206524/v206524703/cacf8/Z54zEK3QNmw.jpg" alt=""/>
+                    <img src="${user.avatarLink}" alt=""/>
                 </div>
             </div>
             <div class="col-md-6">

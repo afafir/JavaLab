@@ -76,7 +76,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http.logout()
                 .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
                 .logoutSuccessUrl("/signIn");
-
         http.formLogin()
                 .loginPage("/signIn")
                 .usernameParameter("email")
@@ -84,6 +83,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .defaultSuccessUrl("/profile")
                 .failureUrl("/signIn?error")
                 .permitAll();
-        //http.addFilterBefore(new CustomFilter(), BasicAuthenticationFilter.class);
+       // http.addFilterBefore(new CustomFilter(), BasicAuthenticationFilter.class);
     }
 }
