@@ -56,7 +56,6 @@ public class ApplicationContextConfig {
     public JdbcTemplate jdbcTemplate() {
         return new JdbcTemplate(dataSource());
     }
-
     @Bean
     public ObjectMapper objectMapper(){
         return new ObjectMapper();
@@ -67,7 +66,6 @@ public class ApplicationContextConfig {
         transactionManager.setEntityManagerFactory(entityManagerFactory);
         return transactionManager;
     }
-
     @Bean
     public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
         HibernateJpaVendorAdapter hibernateJpaVendorAdapter = new HibernateJpaVendorAdapter();
@@ -131,15 +129,6 @@ public class ApplicationContextConfig {
         return mailSender;
     }
 
-    @Bean(name = "viewResolver")
-    public ViewResolver getViewResolver() {
-        FreeMarkerViewResolver viewResolver = new FreeMarkerViewResolver();
-        viewResolver.setCache(true);
-        viewResolver.setContentType("text/html");
-        viewResolver.setPrefix("");
-        viewResolver.setSuffix(".ftl");
-        return viewResolver;
-    }
 
     @ApplicationScope
     @Bean(name = "multipartResolver")
@@ -149,36 +138,12 @@ public class ApplicationContextConfig {
         return multipartResolver;
     }
 
-    @Bean(name = "freemarkerConfig")
-    public FreeMarkerConfigurer getFreeMarkerConfiguration() {
-        FreeMarkerConfigurer config = new FreeMarkerConfigurer();
-        config.setDefaultEncoding("UTF-8");
-        config.setTemplateLoaderPath("/WEB-INF/views/");
-        return config;
-    }
+
 
     @ApplicationScope
     @Bean(name = "passwordEncoder")
     public PasswordEncoder getPasswordEncoder() {
         return new BCryptPasswordEncoder();
-    }
-
-    @Bean
-    @SessionScope
-    public Visitor visitor(HttpServletRequest request){
-        return new Visitor(request.getRemoteAddr());
-    }
-
-    @Scope(scopeName = "task")
-    @Bean
-    public TaskText task(){
-        return new TaskText();
-    }
-
-    @Scope(scopeName = "task")
-    @Bean
-    public TaskText task1(){
-        return new TaskText();
     }
 
 

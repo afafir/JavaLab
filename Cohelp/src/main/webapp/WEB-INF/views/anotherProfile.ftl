@@ -78,7 +78,7 @@
                                 <label>Номер</label>
                             </div>
                             <div class="col-md-6">
-                                <p>${user.phone.substring(0, 4)}*****</p>
+                                <p>${user.phone}</p>
                             </div>
                         </div>
                         <div class="row">

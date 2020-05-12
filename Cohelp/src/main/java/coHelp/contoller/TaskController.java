@@ -22,9 +22,6 @@ public class TaskController {
 
     @Autowired
     private TaskService taskService;
-
-    @Autowired
-    Visitor visitor;
     @ExceptionHandler(ResourceNotFoundException.class)
     public String handleResourceNotFoundException() {
         return "404";
@@ -38,7 +35,6 @@ public class TaskController {
         Optional<Task> task = taskService.getTask(id);
         if (task.isPresent()) {
             modelAndView.addObject("task", task.get());
-            modelAndView.addObject("addr", visitor.getAddress());
         } else {
             throw new ResourceNotFoundException();
         }

@@ -6,6 +6,9 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.context.annotation.Bean;
 
+import javax.validation.constraints.Email;
+import javax.validation.constraints.Size;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -18,7 +21,9 @@ public class SignUpDto {
     private String street;
     private String house;
     private String tel;
+    @Email
     private String email;
+    @Size(min = 6, max = 20)
     private String password;
 
 }

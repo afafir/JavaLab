@@ -1,5 +1,5 @@
+<#import "spring.ftl" as spring />
 <#assign  security=JspTaglibs["/WEB-INF/security.tld"] />
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -27,7 +27,9 @@
 </head>
 <body>
 <#include "header.ftl">
-
+<@spring.bind "signUpDto"/>
+<@spring.message 'profile.page.good.work'/>
+<@spring.message 'profile.page.welcome'/>
 <main class="login-form my-ms-5">
     <div class="container my-sm-5">
         <div class="row justify-content-center">
@@ -97,16 +99,21 @@
                             <div class="form-group row">
                                 <label for="email_address" class="col-md-4 col-form-label text-md-right">E-Mail</label>
                                 <div class="col-md-6">
-                                    <input type="email" id="email" class="form-control" name="email" required>
+                                    <@spring.formInput "signUpDto.email", "class=form-control"/>
+                                    <@spring.showErrors "<br>"/>
+                                  <!--  <input type="email" id="email" class="form-control" name="email" required> -->
                                 </div>
+
                             </div>
 
 
                             <div class="form-group row">
                                 <label for="password" class="col-md-4 col-form-label text-md-right">Пароль</label>
                                 <div class="col-md-6">
-                                    <input type="password" id="password" class="form-control" name="password" required>
+                                    <@spring.formPasswordInput "signUpDto.password", "class=form-control"/>
+                                    <@spring.showErrors "<br>"/>
                                 </div>
+
                             </div>
 
 
@@ -114,9 +121,9 @@
                                 <button type="submit" class="btn btn-warning">
                                     Регистрация
                                 </button>
-
                             </div>
                         </form>
+
                     </div>
 
                 </div>
