@@ -83,6 +83,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .defaultSuccessUrl("/profile")
                 .failureUrl("/signIn?error")
                 .permitAll();
-       // http.addFilterBefore(new CustomFilter(), BasicAuthenticationFilter.class);
+       http.addFilterBefore(new CustomFilter(), BasicAuthenticationFilter.class);
     }
 }

@@ -28,25 +28,24 @@
 <body>
 <#include "header.ftl">
 <@spring.bind "signUpDto"/>
-<@spring.message 'profile.page.good.work'/>
-<@spring.message 'profile.page.welcome'/>
 <main class="login-form my-ms-5">
     <div class="container my-sm-5">
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header text-center"><h1>Регистрация</h1></div>
+                    <div class="card-header text-center"><h1><@spring.message 'signUp.page.register'/></h1></div>
                     <div class="card-body">
                         <form action="signUp" method="post">
                             <div class="form-group row">
-                                <label for="name" class="col-md-4 col-form-label text-md-right">Имя</label>
+                                <label for="name" class="col-md-4 col-form-label text-md-right"><@spring.message 'signUp.page.name'/></label>
                                 <div class="col-md-6">
                                     <input type="text" id="name" class="form-control" name="name" required>
                                 </div>
                             </div>
 
                             <div class="form-group row">
-                                <label for="surname" class="col-md-4 col-form-label text-md-right">Фамилия</label>
+                                <label for="surname" class="col-md-4 col-form-label text-md-right"><@spring.message 'signUp.page.surname'/>
+                                </label>
                                 <div class="col-md-6">
                                     <input type="text" id="surname" class="form-control" name="surname" required>
                                 </div>
@@ -54,7 +53,7 @@
 
 
                             <div class="form-group row">
-                                <label for="role" class="col-md-4 col-form-label text-md-right">Вы?</label>
+                                <label for="role" class="col-md-4 col-form-label text-md-right"><@spring.message 'signUp.page.role'/></label>
                                 <div class="col-md-6">
                                     <select id="role" name="role" class="form-control" required>
 
@@ -69,7 +68,7 @@
 
 
                             <div class="form-group row">
-                                <label for="city" class="col-md-4 col-form-label text-md-right">Город</label>
+                                <label for="city" class="col-md-4 col-form-label text-md-right"><@spring.message 'signUp.page.city'/></label>
                                 <div class="col-md-6">
                                     <input id="city" value="г Казань" name="city" type="text" disabled="true"
                                            class="form-control" required/></div>
@@ -77,19 +76,19 @@
 
 
                             <div class="form-group row">
-                                <label for="street" class="col-md-4 col-form-label text-md-right">Улица</label>
+                                <label for="street" class="col-md-4 col-form-label text-md-right"><@spring.message 'signUp.page.street'/></label>
                                 <div class="col-md-6">
                                     <input id="street" name="street" type="text" class="form-control" required/></div>
                             </div>
 
                             <div class="form-group row">
-                                <label for="house" class="col-md-4 col-form-label text-md-right">Дом</label>
+                                <label for="house" class="col-md-4 col-form-label text-md-right"><@spring.message 'signUp.page.house'/></label>
                                 <div class="col-md-6">
                                     <input id="house" name="house" type="text" class="form-control" required/></div>
                             </div>
 
                             <div class="form-group row">
-                                <label for="tel" class="col-md-4 col-form-label text-md-right">Номер телефона</label>
+                                <label for="tel" class="col-md-4 col-form-label text-md-right"><@spring.message 'signUp.page.name'/></label>
                                 <div class="col-md-6">
                                     <input type="tel" id="tel" class="form-control" name="tel"
                                            pattern="\+7\-[0-9]{3}\-[0-9]{3}\-[0-9]{2}\-[0-9]{2}" required>
@@ -97,7 +96,7 @@
                             </div>
 
                             <div class="form-group row">
-                                <label for="email_address" class="col-md-4 col-form-label text-md-right">E-Mail</label>
+                                <label for="email_address" class="col-md-4 col-form-label text-md-right"><@spring.message 'signUp.page.email'/></label>
                                 <div class="col-md-6">
                                     <@spring.formInput "signUpDto.email", "class=form-control"/>
                                     <@spring.showErrors "<br>"/>
@@ -108,7 +107,7 @@
 
 
                             <div class="form-group row">
-                                <label for="password" class="col-md-4 col-form-label text-md-right">Пароль</label>
+                                <label for="password" class="col-md-4 col-form-label text-md-right"><@spring.message 'signUp.page.password'/></label>
                                 <div class="col-md-6">
                                     <@spring.formPasswordInput "signUpDto.password", "class=form-control"/>
                                     <@spring.showErrors "<br>"/>
@@ -119,7 +118,7 @@
 
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-warning">
-                                    Регистрация
+                                    <@spring.message 'signUp.page.register'/>
                                 </button>
                             </div>
                         </form>
