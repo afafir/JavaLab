@@ -34,8 +34,8 @@ public class ConfirmationController extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String token = req.getParameter("token");
         Optional<UserDto> user = signUpController.ac(token);
-        if (user.isPresent()){
-            req.setAttribute("message", "user " +user.get().getName()+" activated");
+        if (user.isPresent()) {
+            req.setAttribute("message", "user " + user.get().getName() + " activated");
         } else req.setAttribute("message", "user not found");
         req.getRequestDispatcher("Confirmation.jsp").forward(req, resp);
     }

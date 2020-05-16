@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Data
 @SuperBuilder
@@ -23,7 +24,7 @@ import javax.persistence.*;
 @Inheritance(
         strategy = InheritanceType.JOINED
 )
-public class User {
+public class User implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

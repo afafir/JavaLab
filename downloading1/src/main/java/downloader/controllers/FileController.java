@@ -32,7 +32,7 @@ public class FileController {
 
     @RequestMapping(value = "/files", method = RequestMethod.POST)
     public ModelAndView getPage1(@RequestParam("file") CommonsMultipartFile file, @RequestParam("email") String email) throws IOException {
-       // System.out.println(file.getName());
+        // System.out.println(file.getName());
         //System.out.println(file.getContentType());
         //System.out.println(file.getOriginalFilename());
         //System.out.println(file.getStorageDescription());

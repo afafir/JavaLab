@@ -29,6 +29,7 @@ public class PreparerFreemarkerMail implements PreparerMail {
     JavaMailSender sender;
     @Autowired
     Configuration fmConfigFactoryBean;
+
     public Mail createActivateMail(User user) {
         Token token = Token.builder().user(user)
                 .token(UUID.randomUUID().toString())

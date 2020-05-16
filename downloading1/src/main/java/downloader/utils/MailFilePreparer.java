@@ -17,19 +17,21 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Map;
+
 @Component("downloading")
 public class MailFilePreparer implements MailPreparer<FileInfo> {
 
     @Autowired
     FreeMarkerConfigurer freemarkerConfig;
+
     @Override
-     public Mail createMail(FileInfo info) {
+    public Mail createMail(FileInfo info) {
         Map<String, Object> model = new HashMap();
         model.put("link", info.getName() + "." + info.getExtension());
         String html = null;
         try {
             Template t = freemarkerConfig.getConfiguration().getTemplate("download-template.ftl");
-            html = FreeMarkerTemplateUtils.processTemplateIntoString(t,model);
+            html = FreeMarkerTemplateUtils.processTemplateIntoString(t, model);
         } catch (IOException | TemplateException e) {
             e.printStackTrace();
         }

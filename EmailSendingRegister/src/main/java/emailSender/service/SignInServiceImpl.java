@@ -12,6 +12,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
 import java.util.Optional;
+
 @Component
 public class SignInServiceImpl implements SignInService {
 
@@ -19,12 +20,13 @@ public class SignInServiceImpl implements SignInService {
     UserRepository repository;
     @Autowired
     PasswordEncoder encoder;
+
     @Override
     public UserDto signIn(SignInDto dto) {
         Optional<User> user = repository.findByName(dto.getName());
-        if (!user.isPresent()){
+        if (!user.isPresent()) {
             throw new UserNotFoundException("User not found");
-        } else if (!encoder.matches(dto.getPassword(), user.get().getPassword())){
+        } else if (!encoder.matches(dto.getPassword(), user.get().getPassword())) {
             throw new AuthenticationException("Invalid data entered");
         } else if (!user.get().isEnabled())
             throw new ConfirmationException("Activate account please");

@@ -23,6 +23,7 @@ public class TaskServiceImpl implements TaskService {
     @Override
     public void completeTask(Task task) {
         task.setIsDone(true);
+        taskRepository.save(task);
     }
 
     @Override

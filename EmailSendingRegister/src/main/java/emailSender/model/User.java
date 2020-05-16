@@ -20,7 +20,7 @@ public class User {
 
 
     //without password
-    public static User fromDto(SignUpDto dto){
+    public static User fromDto(SignUpDto dto) {
         return User.builder().name(dto.getName())
                 .email(dto.getEmail())
                 .build();

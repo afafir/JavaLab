@@ -33,7 +33,6 @@
     <!-- Portfolio Item Heading -->
     <h1 class="my-4">Задание
         <small>${task.type}</small>
-        <small>${addr}</small>
     </h1>
     <!-- Portfolio Item Row -->
     <div class="row">
@@ -63,6 +62,8 @@
                 <#if task.state == "CONFIRMED" && task.consumer.id==user.id>
                     <form action="/task/done" method="post">
                         <input type="hidden" name="taskId" value="${task.id}">
+                        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
+
                         <div class="col-md-6 offset-md-4">
                             <button type="submit" class="btn btn-warning">
                                 Подтвердить выполнение
@@ -75,6 +76,8 @@
                 <#if (task.state == "IN_PROGRESS" || task.state =="CONFIRMED")&&task.consumer.id==user.id>
                     <form action="/task/reject" method="post">
                         <input type="hidden" name="taskId" value="${task.id}">
+                        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
+
                         <div class="col-md-6 offset-md-4">
                             <button type="submit" class="btn btn-warning">
                                 Отказать в выполнении
@@ -97,6 +100,8 @@
             <#if task.state == "ACTIVE">
                 <form action="/task/accept" method="post">
                     <input type="hidden" name="taskId" value="${task.id}">
+                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
+
                     <div class="col-md-6 offset-md-4">
                         <button type="submit" class="btn btn-warning">
                             Взять задание
@@ -117,6 +122,8 @@
                 <br>
                 <form action="/task/confirm" method="post">
                     <input type="hidden" name="taskId" value="${task.id}">
+                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
+
                     <div class="col-md-6 offset-md-4">
                         <button type="submit" class="btn btn-warning">
                             Завершить

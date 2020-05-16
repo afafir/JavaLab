@@ -23,7 +23,6 @@
 <body>
 <#include "header.ftl">
 <div class="container emp-profile">
-    <form method="post">
         <div class="row">
             <div class="col-md-4">
                 <div class="profile-img">

@@ -18,6 +18,7 @@ import javax.persistence.OneToOne;
 @NoArgsConstructor
 @SuperBuilder
 public class UserDto {
+    private Long id;
     private String email;
     private String name;
     private String surname;

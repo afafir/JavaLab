@@ -1,4 +1,5 @@
 package emailSender.config;
+
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +21,7 @@ import java.util.Properties;
 
 @Configuration
 @PropertySource("classpath:application.properties")
-@ComponentScan( basePackages="emailSender")
+@ComponentScan(basePackages = "emailSender")
 public class ApplicationContextConfig {
 
     @Autowired
@@ -28,18 +29,18 @@ public class ApplicationContextConfig {
 
 
     @Bean
-    public PasswordEncoder passwordEncoder(){
+    public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
 
 
     @Bean
-    public JdbcTemplate jdbcTemplate(){
+    public JdbcTemplate jdbcTemplate() {
         return new JdbcTemplate(dataSource());
     }
 
     @Bean
-    public DataSource driverManagerDataSource(){
+    public DataSource driverManagerDataSource() {
         DriverManagerDataSource ds = new DriverManagerDataSource();
         ds.setDriverClassName(environment.getProperty("db.driver"));
         ds.setUrl(environment.getProperty("db.url"));
@@ -59,7 +60,7 @@ public class ApplicationContextConfig {
     }
 
     @Bean
-    public DataSource dataSource(){
+    public DataSource dataSource() {
         return new HikariDataSource(hikariConfig());
     }
 

@@ -30,8 +30,8 @@ public class EmailAspect {
     MailPreparer mailPreparer;
 
 
-    @AfterReturning(value = "execution(* downloader.services.SignUpService.signUp(..))", returning ="retVal")
-    public void afterReturning(JoinPoint joinPoint, Object retVal)  {
+    @AfterReturning(value = "execution(* downloader.services.SignUpService.signUp(..))", returning = "retVal")
+    public void afterReturning(JoinPoint joinPoint, Object retVal) {
         System.out.println(1);
         Token token = (Token) retVal;
         Mail toSend = mailPreparer.createMail(token);
@@ -50,9 +50,6 @@ public class EmailAspect {
             throw new IllegalStateException();
         }
     }
-
-
-
 
 
 }

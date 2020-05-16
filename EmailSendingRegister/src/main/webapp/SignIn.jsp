@@ -13,9 +13,9 @@
 <body>
 <c:if test="${message ne null}">${message}</c:if>
 <form method="post" action="signIn">
-    Name:<input type="text" name="name" /><br/>
-    Password:<input type="text" name="pass" /><br/>
-    <input type="submit" value="signIn" />
+    Name:<input type="text" name="name"/><br/>
+    Password:<input type="text" name="pass"/><br/>
+    <input type="submit" value="signIn"/>
 </form>
 </body>
 </html>

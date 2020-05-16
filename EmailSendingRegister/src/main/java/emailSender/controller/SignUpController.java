@@ -38,11 +38,11 @@ public class SignUpController extends HttpServlet {
                 .password(req.getParameter("pass")).build();
         try {
             signUpService.SignUp(dto);
-        } catch (EmailExistException exception){
+        } catch (EmailExistException exception) {
             req.setAttribute("message", exception.getMessage());
             req.getRequestDispatcher("SignUp.jsp").forward(req, resp);
         }
-        req.setAttribute("message", "We sent you an confirmation mail at "+ dto.getEmail());
+        req.setAttribute("message", "We sent you an confirmation mail at " + dto.getEmail());
         req.getRequestDispatcher("SignUp.jsp").forward(req, resp);
     }
 }

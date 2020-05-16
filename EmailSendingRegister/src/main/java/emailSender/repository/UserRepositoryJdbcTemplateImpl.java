@@ -13,12 +13,13 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.List;
 import java.util.Optional;
+
 @Component
 public class UserRepositoryJdbcTemplateImpl implements UserRepository {
 
     private static final String FIND_ALL = "SELECT * FROM users";
-    private static final String FIND_BY_NAME ="SELECT * FROM users WHERE name=?";
-    private static final String FIND_BY_EMAIL ="SELECT * FROM users WHERE email=?";
+    private static final String FIND_BY_NAME = "SELECT * FROM users WHERE name=?";
+    private static final String FIND_BY_EMAIL = "SELECT * FROM users WHERE email=?";
     private static final String FIND_BY_ID = "SELECT * FROM users WHERE id=?";
     private static final String INSERT = "INSERT INTO users(name, email, password) VALUES (?,?,?)";
     private static final String UPDATE = "UPDATE users SET name=?, email=?, password=?, flag=? WHERE id=?";
@@ -36,13 +37,12 @@ public class UserRepositoryJdbcTemplateImpl implements UserRepository {
             .build();
 
 
-
     @Override
     public Optional<User> findByName(String name) {
         try {
-            User user = template.queryForObject(FIND_BY_NAME,new Object[]{name}, userRowMapper);
+            User user = template.queryForObject(FIND_BY_NAME, new Object[]{name}, userRowMapper);
             return Optional.of(user);
-        }catch (EmptyResultDataAccessException e){
+        } catch (EmptyResultDataAccessException e) {
             return Optional.empty();
         }
     }
@@ -50,9 +50,9 @@ public class UserRepositoryJdbcTemplateImpl implements UserRepository {
     @Override
     public Optional<User> findByEmail(String email) {
         try {
-            User user = template.queryForObject(FIND_BY_EMAIL,new Object[]{email}, userRowMapper);
+            User user = template.queryForObject(FIND_BY_EMAIL, new Object[]{email}, userRowMapper);
             return Optional.ofNullable(user);
-        }catch (EmptyResultDataAccessException e){
+        } catch (EmptyResultDataAccessException e) {
             return Optional.empty();
         }
     }
@@ -66,14 +66,14 @@ public class UserRepositoryJdbcTemplateImpl implements UserRepository {
             ps.setString(2, data.getEmail());
             ps.setString(3, data.getPassword());
             return ps;
-        },holder);
+        }, holder);
         data.setId(holder.getKey().longValue());
         return data;
     }
 
     @Override
     public void update(User data) {
-        template.update(UPDATE, data.getName(), data.getEmail(),  data.getPassword(),data.isEnabled(), data.getId());
+        template.update(UPDATE, data.getName(), data.getEmail(), data.getPassword(), data.isEnabled(), data.getId());
     }
 
     @Override
@@ -85,9 +85,9 @@ public class UserRepositoryJdbcTemplateImpl implements UserRepository {
     @Override
     public Optional<User> find(Long id) {
         try {
-            User user = template.queryForObject(FIND_BY_ID,new Object[]{id}, userRowMapper);
+            User user = template.queryForObject(FIND_BY_ID, new Object[]{id}, userRowMapper);
             return Optional.of(user);
-        }catch (EmptyResultDataAccessException e){
+        } catch (EmptyResultDataAccessException e) {
             return Optional.empty();
         }
     }

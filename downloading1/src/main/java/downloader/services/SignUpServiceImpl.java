@@ -41,14 +41,13 @@ public class SignUpServiceImpl implements SignUpService {
     }
 
     @Override
-    public Optional<UserDto> activate(String token){
+    public Optional<UserDto> activate(String token) {
         Optional<Token> toActivate = tokenRepository.findByToken(token);
-        if (toActivate.isPresent()){
+        if (toActivate.isPresent()) {
             User user = toActivate.get().getUser();
             user.setState(State.CONFIRMED);
             userRepository.saveAndFlush(user);
             return Optional.of(UserDto.from(user));
-        }
-        else return Optional.empty();
+        } else return Optional.empty();
     }
 }

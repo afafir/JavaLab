@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="/resources/css/bootstrap.min.css">
     <link rel="stylesheet" href="/resources/css/bootstrap-grid.css">
     <link rel="stylesheet" href=/resources/css/bootstrap-reboot.css">
+    <meta name="_csrf" content="${_csrf.token}"/>
+    <meta name="_csrf_header" content="${_csrf.headerName}"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.1.4/sockjs.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
@@ -21,7 +23,6 @@
             type="text/javascript"></script>
     <script>
         var stompClient = null;
-
         function connect() {
             var socket = new SockJS('/ws');
             stompClient = Stomp.over(socket);

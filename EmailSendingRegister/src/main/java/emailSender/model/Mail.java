@@ -6,6 +6,7 @@ import lombok.Data;
 
 import java.util.List;
 import java.util.Map;
+
 @AllArgsConstructor
 @Data
 @Builder
@@ -20,9 +21,10 @@ public class Mail {
 
     private String contentType;
 
-    private List< Object > attachments;
+    private List<Object> attachments;
 
-    private Map< String, Object > model;
+    private Map<String, Object> model;
+
     public Mail() {
         contentType = "text/plain";
     }

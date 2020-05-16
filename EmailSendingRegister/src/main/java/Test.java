@@ -14,7 +14,7 @@ public class Test {
         UserRepository repository = springContext.getBean(UserRepositoryJdbcTemplateImpl.class);
         EmailService emailService = springContext.getBean(EmailServiceImpl.class);
         User user = User.builder()
-                .id((long)5)
+                .id((long) 5)
                 .email("volnuhinegor@mail.ru")
                 .password("123")
                 .name("Egor")

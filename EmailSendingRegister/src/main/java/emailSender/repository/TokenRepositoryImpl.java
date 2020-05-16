@@ -14,6 +14,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.List;
 import java.util.Optional;
+
 @Component
 public class TokenRepositoryImpl implements TokenRepository {
 
@@ -23,7 +24,7 @@ public class TokenRepositoryImpl implements TokenRepository {
     @Autowired
     JdbcTemplate template;
 
-    private RowMapper<Token> rowMapper = (ResultSet rs, int row)->
+    private RowMapper<Token> rowMapper = (ResultSet rs, int row) ->
     {
         User user = User.builder()
                 .id(rs.getLong("id"))
@@ -40,9 +41,9 @@ public class TokenRepositoryImpl implements TokenRepository {
     @Override
     public Optional<Token> findByUser(User user) {
         try {
-            Token token = template.queryForObject(FIND_FOR_USER,new Object[]{user.getId()}, rowMapper);
+            Token token = template.queryForObject(FIND_FOR_USER, new Object[]{user.getId()}, rowMapper);
             return Optional.of(token);
-        }catch (EmptyResultDataAccessException e){
+        } catch (EmptyResultDataAccessException e) {
             return Optional.empty();
         }
     }
@@ -50,9 +51,9 @@ public class TokenRepositoryImpl implements TokenRepository {
     @Override
     public Optional<Token> findByToken(String tokenStr) {
         try {
-            Token token = template.queryForObject(FIND_BY_TOKEN,new Object[]{tokenStr}, rowMapper);
+            Token token = template.queryForObject(FIND_BY_TOKEN, new Object[]{tokenStr}, rowMapper);
             return Optional.of(token);
-        }catch (EmptyResultDataAccessException e){
+        } catch (EmptyResultDataAccessException e) {
             return Optional.empty();
         }
     }

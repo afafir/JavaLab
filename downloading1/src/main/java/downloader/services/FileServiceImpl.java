@@ -14,6 +14,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Optional;
 import java.util.UUID;
+
 @Service("default")
 public class FileServiceImpl implements FileService {
 
@@ -28,14 +29,14 @@ public class FileServiceImpl implements FileService {
         FileInfo info = FileInfo.builder()
                 .name(file.getOriginalFilename().substring(0, file.getOriginalFilename().lastIndexOf(".")))
                 .generatedName(UUID.randomUUID().toString())
-                .extension(file.getOriginalFilename().substring(file.getOriginalFilename().lastIndexOf(".")+1))
+                .extension(file.getOriginalFilename().substring(file.getOriginalFilename().lastIndexOf(".") + 1))
                 .size(file.getSize())
                 .state("active")
                 .mimeType(file.getContentType())
                 .uploadedUser(user)
                 .build();
-        info.setPath(STORAGE_PATH + info.getGeneratedName()+"."+info.getExtension());
-        info=fileRepository.save(info);
+        info.setPath(STORAGE_PATH + info.getGeneratedName() + "." + info.getExtension());
+        info = fileRepository.save(info);
         file.transferTo(new File(info.getPath()));
         return info;
     }
@@ -43,7 +44,7 @@ public class FileServiceImpl implements FileService {
     @Override
     public FileInfo download(String filename) {
         FileInfo info = fileRepository.findByName(filename).get();
-      //  fileInputStream.transferTo(response.getOutputStream());
+        //  fileInputStream.transferTo(response.getOutputStream());
         return info;
     }
 }

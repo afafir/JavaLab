@@ -16,8 +16,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+
 @WebServlet(urlPatterns = "/signIn")
-public class SignInController  extends HttpServlet {
+public class SignInController extends HttpServlet {
 
     private SignInService signInService;
 
@@ -45,7 +46,7 @@ public class SignInController  extends HttpServlet {
             req.getSession(true);
             req.getSession().setAttribute("user", userDto);
             req.getRequestDispatcher("MainPage.jsp").forward(req, resp);
-        } catch (AuthenticationException | UserNotFoundException | ConfirmationException e){
+        } catch (AuthenticationException | UserNotFoundException | ConfirmationException e) {
             req.setAttribute("message", e.getMessage());
             req.getRequestDispatcher("SignIn.jsp").forward(req, resp);
         }

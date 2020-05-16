@@ -25,7 +25,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-      //  super.configure(http);
+        //  super.configure(http);
         http.csrf().disable();
         http.authorizeRequests()
                 .antMatchers("/signUp").not().authenticated()

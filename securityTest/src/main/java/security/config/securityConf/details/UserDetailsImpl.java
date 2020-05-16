@@ -12,11 +12,11 @@ import java.util.Collections;
 public class UserDetailsImpl implements UserDetails {
     private User user;
 
-    public UserDetailsImpl(User user){
+    public UserDetailsImpl(User user) {
         this.user = user;
     }
 
-    public User getUser(){
+    public User getUser() {
         return user;
     }
 

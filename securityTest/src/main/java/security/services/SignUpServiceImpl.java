@@ -9,6 +9,7 @@ import security.models.user.Role;
 import security.models.user.State;
 import security.models.user.User;
 import security.repositories.UserRepository;
+
 @Service
 public class SignUpServiceImpl implements SignUpService {
     @Autowired

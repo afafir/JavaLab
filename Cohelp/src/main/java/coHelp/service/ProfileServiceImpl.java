@@ -48,6 +48,7 @@ public class ProfileServiceImpl implements ProfileService {
             User user = optionalUser.get();
             if (user.getRole().equals(Role.VOLUNTEER)) {
                 return VolunteerDto.builder()
+                        .id(user.getId())
                         .tasks((((Volunteer) user).getTasks()))
                         .address(user.getAddress())
                         .email(user.getEmail())
@@ -58,6 +59,7 @@ public class ProfileServiceImpl implements ProfileService {
                         .avatarLink(user.getAvatar() == null ? "resources/user_image/default.jpg" : "resources/user_image"+ "/" + user.getAvatar().getFileName()+user.getAvatar().getExtension())
                         .build();
             } else return ConsumerDto.builder()
+                    .id(user.getId())
                     .tasks(((Consumer) user).getTasks())
                     .address(user.getAddress())
                     .email(user.getEmail())

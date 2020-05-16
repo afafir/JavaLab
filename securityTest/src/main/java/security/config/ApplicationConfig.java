@@ -58,7 +58,6 @@ public class ApplicationConfig {
     }
 
 
-
     @Bean
     public JdbcTemplate jdbcTemplate() {
         return new JdbcTemplate(dataSource());
@@ -90,7 +89,6 @@ public class ApplicationConfig {
     }
 
 
-
     @Bean(name = "viewResolver")
     public ViewResolver getViewResolver() {
         FreeMarkerViewResolver viewResolver = new FreeMarkerViewResolver();
@@ -101,7 +99,7 @@ public class ApplicationConfig {
     }
 
     @Bean(name = "passwordEncoder")
-    public PasswordEncoder getPasswordEncoder(){
+    public PasswordEncoder getPasswordEncoder() {
         return new BCryptPasswordEncoder();
     }
 

@@ -9,6 +9,8 @@ import java.util.Optional;
 
 public interface SignUpService {
     UserDto SignUp(SignUpDto dto) throws AuthenticationException;
+
     boolean isExist(User user);
+
     Optional<UserDto> activate(String token);
 }

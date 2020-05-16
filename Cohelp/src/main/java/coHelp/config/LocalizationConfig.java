@@ -9,10 +9,12 @@ import org.springframework.stereotype.Component;
 import org.springframework.validation.DefaultMessageCodesResolver;
 import org.springframework.validation.MessageCodesResolver;
 import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
+import org.springframework.web.filter.CharacterEncodingFilter;
 import org.springframework.web.servlet.LocaleResolver;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.i18n.CookieLocaleResolver;
 import org.springframework.web.servlet.i18n.LocaleChangeInterceptor;
@@ -29,7 +31,7 @@ public class LocalizationConfig implements WebMvcConfigurer {
     public FreeMarkerConfigurer getConf() {
         final FreeMarkerConfigurer result = new FreeMarkerConfigurer();
         result.setTemplateLoaderPath("/WEB-INF/views");
-        result.setDefaultEncoding("UTF-8");
+       // result.setDefaultEncoding("UTF-8");
         return result;
     }
 
@@ -64,6 +66,11 @@ public class LocalizationConfig implements WebMvcConfigurer {
         return cookieLocaleResolver;
     }
 
+    @Override
+    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+        registry.addResourceHandler("/resources/**").addResourceLocations("WEB-INF/resources/");
+    }
+
     @Bean
     public LocaleChangeInterceptor localeChangeInterceptor() {
         LocaleChangeInterceptor localeChangeInterceptor = new LocaleChangeInterceptor();
@@ -87,6 +94,14 @@ public class LocalizationConfig implements WebMvcConfigurer {
         LocalValidatorFactoryBean bean = new LocalValidatorFactoryBean();
         bean.setValidationMessageSource(messageSource());
         return bean;
+    }
+
+    @Bean
+    public CharacterEncodingFilter filterRegistrationBean() {
+        CharacterEncodingFilter characterEncodingFilter = new CharacterEncodingFilter();
+        characterEncodingFilter.setEncoding("UTF-8");
+        characterEncodingFilter.setForceEncoding(true);
+        return characterEncodingFilter;
     }
 
     @Override

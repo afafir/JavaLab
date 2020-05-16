@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.*;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 
 @Data
@@ -15,7 +16,7 @@ import javax.persistence.*;
 @ToString(exclude = "user")
 @Table(name = "project_address", schema = "cohelp1")
 @JsonIgnoreProperties(value = "user")
-public class Address {
+public class Address implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

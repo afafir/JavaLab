@@ -1,5 +1,6 @@
 <#import "spring.ftl" as spring />
 <#assign  security=JspTaglibs["/WEB-INF/security.tld"] />
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -121,6 +122,7 @@
                                     <@spring.message 'signUp.page.register'/>
                                 </button>
                             </div>
+                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
                         </form>
 
                     </div>

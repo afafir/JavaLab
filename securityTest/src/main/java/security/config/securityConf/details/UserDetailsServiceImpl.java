@@ -9,6 +9,7 @@ import security.models.user.User;
 import security.repositories.UserRepository;
 
 import java.util.Optional;
+
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {
 

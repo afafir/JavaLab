@@ -10,6 +10,6 @@
 </head>
 <body>
 <div>
-  This is root page
+    This is root page
 </body>
 </html>

@@ -1,5 +1,5 @@
 package security.models.user;
 
-public enum  Role {
+public enum Role {
     ADMIN, USER
 }

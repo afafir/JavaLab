@@ -17,13 +17,13 @@ public class SignUpController {
 
 
     @RequestMapping(value = "/signUp", method = RequestMethod.GET)
-    public String getPage(Authentication authentication)
-    {
-        if (authentication !=null){
+    public String getPage(Authentication authentication) {
+        if (authentication != null) {
             return "redirect:/profile";
         }
         return "signUp";
     }
+
     @RequestMapping(value = "/signUp", method = RequestMethod.POST)
     public String signUp(SignUpDto form) {
         signUpService.signUp(form);

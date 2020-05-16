@@ -9,5 +9,6 @@ import java.util.Optional;
 
 public interface SignUpService {
     Token signUp(SignUpDto dto);
+
     Optional<UserDto> activate(String token);
 }

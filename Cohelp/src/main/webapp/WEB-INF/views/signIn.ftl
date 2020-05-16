@@ -34,6 +34,8 @@
                     <div class="card-header text-center"><h1>Войти</h1></div>
                     <div class="card-body">
                         <form action="signIn" method="post">
+                            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
+
                             <div class="form-group row">
                                 <label for="email" class="col-md-4 col-form-label text-md-right">E-Mail</label>
                                 <div class="col-md-6">
@@ -52,7 +54,7 @@
                                 <div class="col-md-6 offset-md-4">
                                     <div class="checkbox">
                                         <label>
-                                            <input type="checkbox" name="remember"> Remember Me
+                                            <input type="checkbox" name="remember" id="remember"> Remember Me
                                         </label>
                                     </div>
                                 </div>

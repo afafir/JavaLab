@@ -27,7 +27,7 @@ import javax.mail.internet.MimeMessage;
 import org.springframework.ui.freemarker.FreeMarkerTemplateUtils;
 
 @Component
-public class EmailServiceImpl implements EmailService{
+public class EmailServiceImpl implements EmailService {
     @Autowired
     TokenRepository tokenRepository;
     @Autowired
@@ -36,8 +36,9 @@ public class EmailServiceImpl implements EmailService{
     JavaMailSender sender;
     @Autowired
     Configuration fmConfigFactoryBean;
+
     @Override
-    public void sendMessage(Mail mail)  {
+    public void sendMessage(Mail mail) {
         MimeMessage message = sender.createMimeMessage();
         MimeMessageHelper helper = null;
         try {

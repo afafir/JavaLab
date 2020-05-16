@@ -11,7 +11,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name="lab_user")
+@Table(name = "lab_user")
 @Builder
 public class User {
     @Id
@@ -26,6 +26,6 @@ public class User {
     private State state;
     @Enumerated(EnumType.STRING)
     private Role role;
-    @OneToOne(mappedBy = "user", fetch = FetchType.LAZY, cascade = CascadeType.ALL  )
+    @OneToOne(mappedBy = "user", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private Token token;
 }

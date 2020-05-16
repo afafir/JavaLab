@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="_csrf" content="${_csrf.token}"/>
+    <meta name="_csrf_header" content="${_csrf.headerName}"/>
     <title>Document</title>
     <link rel="stylesheet" href="resources/css/bootstrap.min.css">
     <link rel="stylesheet" href="resources/css/bootstrap-grid.css">
@@ -21,6 +23,8 @@
             crossorigin="anonymous"></script>
     <script>
         function sendFile() {
+            var token = $("meta[name='_csrf']").attr("content");
+            var header = $("meta[name='_csrf_header']").attr("content");
             // данные для отправки
             let formData = new FormData();
             // забрал файл из input
@@ -29,12 +33,17 @@
             [].forEach.call(files, function (file, i, files) {
                 formData.append("file", file);
             });
-            $.ajax({
+            $.ajax
+            (
+                {
                 type: "POST",
                 url: "http://localhost:8080/profile/upload_avatar",
                 data: formData,
                 processData: false,
-                contentType: false
+                contentType: false,
+                    beforeSend: function( xhr ) {
+                        xhr.setRequestHeader(header, token);
+                    }
             })
                 .done(function (response) {
                     alert('Аватар обновлен');

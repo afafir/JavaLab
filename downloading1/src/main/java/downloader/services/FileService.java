@@ -8,5 +8,6 @@ import java.io.IOException;
 
 public interface FileService {
     FileInfo upload(CommonsMultipartFile file, User user) throws IOException;
+
     FileInfo download(String filename);
 }

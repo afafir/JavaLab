@@ -15,7 +15,7 @@ public class UserDto {
     private String name;
     private String email;
 
-    public static UserDto from(User user){
+    public static UserDto from(User user) {
         return UserDto.builder()
                 .name(user.getName())
                 .email(user.getEmail())

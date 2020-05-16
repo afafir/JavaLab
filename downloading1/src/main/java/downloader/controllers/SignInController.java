@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class SignInController {
     @RequestMapping(value = "/signIn", method = RequestMethod.GET)
     public String getPage(Authentication authentication) {
-        if (authentication !=null){
+        if (authentication != null) {
             return "redirect:/profile";
         }
         return "signIn";
