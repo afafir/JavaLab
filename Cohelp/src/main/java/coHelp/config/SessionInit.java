@@ -12,7 +12,7 @@ import javax.sql.DataSource;
 
 @Configuration
 @EnableJdbcHttpSession
-class SesssionInit extends AbstractHttpSessionApplicationInitializer {
+class SessionInit extends AbstractHttpSessionApplicationInitializer {
 
     @Autowired
     private DataSource dataSource;

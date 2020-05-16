@@ -1,0 +1,1202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="EmailSendingRegister:war" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9a7b9e72-cde5-429a-ae7b-ce65e97623c7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/config/ApplicationContextConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/config/SecurityWebApplicationInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/config/WebSecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/config/details/UserDetailsImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/config/details/UserDetailsServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/contoller/SignInController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/contoller/SignUpController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/dto/SignInDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/dto/SignUpDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/model/Address.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/model/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/model/State.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/repository/AddressRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/repository/AddressRepositoryJpaImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/repository/CrudRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/repository/UserRepositoryJpaImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/service/SignUpService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/service/SignUpServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/service/Standartization.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cohelp/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cohelp/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/dispatcherServlet-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/resources/css/bootstrap-grid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/resources/css/bootstrap-grid.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/resources/css/bootstrap-grid.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/resources/css/bootstrap-grid.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/resources/css/bootstrap-reboot.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/resources/css/bootstrap-reboot.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/resources/css/bootstrap-reboot.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/resources/css/bootstrap-reboot.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/resources/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/resources/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/resources/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/resources/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/resources/img/blue_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/resources/img/carousel1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/resources/img/carousel2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/resources/img/carousel3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/resources/img/var2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/resources/img/want_help.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/resources/js/bootstrap.bundle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/resources/js/bootstrap.bundle.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/resources/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/resources/js/bootstrap.bundle.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/resources/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/resources/js/bootstrap.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/resources/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/resources/js/bootstrap.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/resources/js/city.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/views/header.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/views/index.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/views/signIn.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/views/signUp.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../downloading1/src/main/test.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../downloading1/src/main/java/downloader/models/user/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/../downloading1/src/main/java/downloader/models/user/Role.java" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="postgres@twitter-stock.c5xfqmydalh1.us-east-1.rds.amazonaws.com" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="postgres@twitter-stock.c5xfqmydalh1.us-east-1.rds.amazonaws.com" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="postgres@twitter-stock.c5xfqmydalh1.us-east-1.rds.amazonaws.com" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="postgres: database" type="162271b6:PgImplModel$Database" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="postgres@twitter-stock.c5xfqmydalh1.us-east-1.rds.amazonaws.com" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="postgres: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="postgres@twitter-stock.c5xfqmydalh1.us-east-1.rds.amazonaws.com" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="postgres: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="email_sending: schema" type="983ebcf7:PgImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="postgres@twitter-stock.c5xfqmydalh1.us-east-1.rds.amazonaws.com" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="postgres: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="email_sending: schema" type="983ebcf7:PgImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="postgres@twitter-stock.c5xfqmydalh1.us-east-1.rds.amazonaws.com" type="feb32156:DbDataSourceImpl" />
+        <item name="roles" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/emailSender/dto/SignUpDto.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="8" selection-start-line="8" selection-end-line="11" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/emailSender/config/ApplicationContextConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="389">
+              <caret line="85" column="33" selection-start-line="85" selection-start-column="33" selection-end-line="85" selection-end-column="33" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/email-template.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/emailSender/repository/TokenRepositoryImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="19" column="147" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="147" />
+              <folding>
+                <element signature="method#update#0;class#TokenRepositoryImpl#0" />
+                <element signature="method#delete#0;class#TokenRepositoryImpl#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/emailSender/service/SignUpService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="12" column="45" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/emailSender/dto/UserDto.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/emailSender/service/SignUpServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="561">
+              <caret line="50" column="28" selection-start-line="50" selection-start-column="28" selection-end-line="50" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/emailSender/util/exception/AuthenticationException.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Jsp File" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/emailSender/listener/SpringContextServletContextListener.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/SignUp.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/SignIn.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/emailSender/service/SignInService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/emailSender/repository/AuthRepository.java" />
+        <option value="2cf01ea7-af44-4d85-91d9-7505ac8b604b/database/postgres/schema/email_sending/table/test.sql" />
+        <option value="$PROJECT_DIR$/src/main/java/emailSender/model/Token.java" />
+        <option value="$PROJECT_DIR$/src/main/java/emailSender/repository/TokenRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/emailSender/dto/SignInDto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/emailSender/util/exception/EmailExistException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/emailSender/util/exception/UserNotFoundException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/emailSender/controller/SignUpController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/emailSender/util/exception/ConfirmationException.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/SignIn.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/MainPage.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/emailSender/controller/SignInController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/emailSender/util/exception/exception/EmailExistException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/emailSender/util/exception/AuthenticationException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/emailSender/util/tokenGenerator/UuidGenerator.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/email-template.html" />
+        <option value="$PROJECT_DIR$/src/main/java/emailSender/model/Mail.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/emailSender/repository/UserRepository.java" />
+        <option value="2cf01ea7-af44-4d85-91d9-7505ac8b604b/database/postgres/schema/email_sending/table/users.sql" />
+        <option value="$PROJECT_DIR$/src/main/webapp/Confirmation.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/emailSender/repository/TokenRepositoryImpl.java" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/2cf01ea7-af44-4d85-91d9-7505ac8b604b/console.sql" />
+        <option value="$PROJECT_DIR$/src/main/java/emailSender/repository/UserRepositoryJdbcTemplateImpl.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/email-template.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/emailSender/config/ApplicationContextConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/emailSender/util/exception/MailUtil/PrepateFreemarkerMail.java" />
+        <option value="$PROJECT_DIR$/src/main/java/emailSender/util/exception/MailUtil/PrepareMail.java" />
+        <option value="$PROJECT_DIR$/src/main/java/emailSender/util/exception/MailUtil/PrepareFreemarkerMail.java" />
+        <option value="$PROJECT_DIR$/src/main/java/emailSender/util/exception/MailUtil/PreparerFreemarkerMail.java" />
+        <option value="$PROJECT_DIR$/src/main/java/emailSender/util/exception/MailUtil/PreparerMail.java" />
+        <option value="$PROJECT_DIR$/src/main/java/emailSender/service/SignUpServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/emailSender/service/SignInServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/emailSender/service/SignUpService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/emailSender/service/EmailService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/emailSender/service/EmailServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/emailSender/controller/ConfirmationController.java" />
+      </list>
+    </option>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="EmailSendingRegister Maven Webapp" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="EmailSendingRegister Maven Webapp" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectConfigurationFiles">
+    <option name="files">
+      <list>
+        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-10" />
+    <option name="width" value="1735" />
+    <option name="height" value="1040" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="EmailSendingRegister" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EmailSendingRegister" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="EmailSendingRegister" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EmailSendingRegister" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="EmailSendingRegister" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EmailSendingRegister" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="EmailSendingRegister" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EmailSendingRegister" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="EmailSendingRegister" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EmailSendingRegister" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="emailSender" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="EmailSendingRegister" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EmailSendingRegister" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="emailSender" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="EmailSendingRegister" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EmailSendingRegister" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="emailSender" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="EmailSendingRegister" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EmailSendingRegister" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="emailSender" type="462c0819:PsiDirectoryNode" />
+              <item name="dto" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="EmailSendingRegister" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EmailSendingRegister" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="emailSender" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="EmailSendingRegister" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EmailSendingRegister" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="emailSender" type="462c0819:PsiDirectoryNode" />
+              <item name="repository" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="EmailSendingRegister" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EmailSendingRegister" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="emailSender" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="EmailSendingRegister" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EmailSendingRegister" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="EmailSendingRegister" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EmailSendingRegister" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="EmailSendingRegister" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EmailSendingRegister" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="EmailSendingRegister" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EmailSendingRegister" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="EmailSendingRegister" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EmailSendingRegister" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="EmailSendingRegister" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EmailSendingRegister" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="EmailSendingRegister" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="EmailSendingRegister" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
+            </path>
+            <path>
+              <item name="EmailSendingRegister" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
+              <item name="Database Consoles" type="d62648e6:ScratchProjectViewPane$MyRootNode" />
+            </path>
+            <path>
+              <item name="EmailSendingRegister" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
+              <item name="Database Consoles" type="d62648e6:ScratchProjectViewPane$MyRootNode" />
+              <item name="2cf01ea7-af44-4d85-91d9-7505ac8b604b" type="1e004dc1:ScratchProjectViewPane$MyRootNode$1$1" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="postgresql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="database.console.LAST_STATE" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\java\JavaLab\EmailSendingRegister\src\main\resources" />
+      <recent name="C:\java\JavaLab\EmailSendingRegister\src\main\webapp" />
+      <recent name="C:\java\JavaLab\EmailSendingRegister\src\main" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\java\JavaLab\EmailSendingRegister\src\main\webapp" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.241">
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Test" />
+      <module name="EmailSendingRegister" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tomcat 9.0.241" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.241" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="EmailSendingRegister:war">
+          <settings>
+            <option name="CONTEXT_PATH" value="/EmailSendingRegister_war" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_EmailSendingRegister" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="52975" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="EmailSendingRegister:war" />
+        </option>
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Test" />
+      <item itemvalue="Tomcat Server.Tomcat 9.0.241" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Test" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9a7b9e72-cde5-429a-ae7b-ce65e97623c7" name="Default Changelist" comment="" />
+      <created>1583425865944</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1583425865944</updated>
+      <workItem from="1583425870943" duration="6092000" />
+      <workItem from="1583480867612" duration="4958000" />
+      <workItem from="1583515562061" duration="9732000" />
+      <workItem from="1583568366921" duration="22047000" />
+      <workItem from="1583611442217" duration="1105000" />
+      <workItem from="1583660286904" duration="8716000" />
+      <workItem from="1583700452306" duration="108000" />
+      <workItem from="1583758243661" duration="108000" />
+      <workItem from="1583759264405" duration="908000" />
+      <workItem from="1583845566746" duration="1716000" />
+      <workItem from="1583913104643" duration="283000" />
+      <workItem from="1583930518157" duration="1051000" />
+      <workItem from="1584292967610" duration="3009000" />
+      <workItem from="1584355112000" duration="11000" />
+      <workItem from="1584356800590" duration="96000" />
+      <workItem from="1584356956778" duration="2686000" />
+      <workItem from="1584360051635" duration="715000" />
+      <workItem from="1584469319590" duration="635000" />
+      <workItem from="1584522841359" duration="598000" />
+      <workItem from="1584637334223" duration="1019000" />
+      <workItem from="1584871443846" duration="1527000" />
+      <workItem from="1585067105998" duration="811000" />
+      <workItem from="1585139646225" duration="30000" />
+      <workItem from="1585201679864" duration="2779000" />
+      <workItem from="1585242375374" duration="25000" />
+      <workItem from="1585243478000" duration="565000" />
+      <workItem from="1585327589518" duration="2557000" />
+      <workItem from="1585998977130" duration="40000" />
+      <workItem from="1586076656959" duration="16000" />
+      <workItem from="1586169389881" duration="8000" />
+    </task>
+    <task id="LOCAL-00001" summary="Email sending register without MVC and Security">
+      <created>1585067274850</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1585067274850</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="73951000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.37651005" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Capture Tool" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info id="Image Layers" order="6" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.8234899" weight="0.49008498" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.6865772" weight="0.39943343" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3286119" />
+      <window_info anchor="bottom" id="Application Servers" order="7" sideWeight="0.4986577" weight="0.3286119" />
+      <window_info anchor="bottom" id="Spring" order="8" sideWeight="0.49932885" weight="0.3286119" />
+      <window_info anchor="bottom" id="Database Console" order="9" sideWeight="0.49932885" weight="0.3286119" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.3286119" />
+      <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.17651007" side_tool="true" weight="0.49008498" />
+      <window_info anchor="bottom" id="Messages" order="13" sideWeight="0.49932885" weight="0.3286119" />
+      <window_info anchor="bottom" id="Java Enterprise" order="14" sideWeight="0.49932885" weight="0.3286119" />
+      <window_info anchor="bottom" id="Database Changes" order="15" weight="0.3286119" />
+      <window_info anchor="bottom" id="Version Control" order="16" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.1818792" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" weight="0.19664429" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Email sending register without MVC and Security" />
+    <option name="LAST_COMMIT_MESSAGE" value="Email sending register without MVC and Security" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/emailSender/controller/SignUpController.java</url>
+          <line>35</line>
+          <properties />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Test.java</url>
+          <line>21</line>
+          <properties />
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/emailSender/controller/ConfirmationController.java</url>
+          <line>34</line>
+          <properties />
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.2.3.RELEASE/spring-beans-5.2.3.RELEASE-sources.jar!/org/springframework/beans/factory/annotation/AnnotationBeanWiringInfoResolver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context-support/5.0.1.RELEASE/spring-context-support-5.0.1.RELEASE-sources.jar!/org/springframework/ui/freemarker/FreeMarkerConfigurationFactoryBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="57" column="23" selection-start-line="57" selection-start-column="23" selection-end-line="57" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-jdbc/5.2.3.RELEASE/spring-jdbc-5.2.3.RELEASE-sources.jar!/org/springframework/jdbc/core/JdbcTemplate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="614" column="21" selection-start-line="614" selection-start-column="21" selection-end-line="614" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-jdbc/5.2.3.RELEASE/spring-jdbc-5.2.3.RELEASE-sources.jar!/org/springframework/jdbc/package-info.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-jdbc/5.2.3.RELEASE/spring-jdbc-5.2.3.RELEASE-sources.jar!/org/springframework/jdbc/core/JdbcOperations.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="884" column="8" selection-start-line="884" selection-start-column="8" selection-end-line="884" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/emailSender/model/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="9" selection-start-line="9" selection-end-line="12" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/SignIn.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="7" lean-forward="true" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://2cf01ea7-af44-4d85-91d9-7505ac8b604b/database/postgres/schema/email_sending/table/users.sql" />
+    <entry file="das://2cf01ea7-af44-4d85-91d9-7505ac8b604b/database/postgres/schema/email_sending/table/tokens" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="19" column="27" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://2cf01ea7-af44-4d85-91d9-7505ac8b604b/database/postgres/schema/email_sending/table/test" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/2cf01ea7-af44-4d85-91d9-7505ac8b604b/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="136" selection-start-column="136" selection-end-column="136" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://2cf01ea7-af44-4d85-91d9-7505ac8b604b/database/postgres/schema/email_sending/table/users" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/SignUp.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" selection-start-line="14" selection-end-line="14" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/emailSender/util/tokenGenerator/UuidGenerator.java" />
+    <entry file="file://$PROJECT_DIR$/EmailSendingRegister.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/MainPage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" selection-start-line="13" selection-end-line="13" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1887">
+          <caret line="111" column="7" selection-start-line="111" selection-start-column="7" selection-end-line="111" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/emailSender/repository/UserRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/emailSender/model/Mail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/emailSender/listener/SpringContextServletContextListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/emailSender/service/SignInService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/emailSender/service/EmailService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/emailSender/util/exception/MailUtil/PreparerFreemarkerMail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="30" column="25" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/emailSender/repository/CrudRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="5" selection-start-line="5" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/emailSender/controller/SignInController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="19" column="52" selection-start-line="19" selection-start-column="52" selection-end-line="19" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/emailSender/service/EmailServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="55" selection-start-line="55" selection-end-line="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#sendMessage#0;class#EmailServiceImpl#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/emailSender/controller/SignUpController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="39" column="28" selection-start-line="39" selection-start-column="28" selection-end-line="39" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/emailSender/service/SignInServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/emailSender/util/exception/MailUtil/PreparerMail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="11" column="39" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/emailSender/repository/UserRepositoryJdbcTemplateImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="621">
+          <caret line="83" selection-start-line="83" selection-end-line="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/emailSender/util/exception/UserNotFoundException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/emailSender/util/exception/EmailExistException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/emailSender/dto/SignInDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/emailSender/repository/TokenRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/emailSender/model/Token.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/emailSender/util/exception/ConfirmationException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/emailSender/controller/ConfirmationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="37" column="31" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/Confirmation.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" selection-start-line="7" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/emailSender/controller/MainPageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/emailSender/dto/SignUpDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="8" selection-start-line="8" selection-end-line="11" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/email-template.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/emailSender/repository/TokenRepositoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="19" column="147" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="147" />
+          <folding>
+            <element signature="method#update#0;class#TokenRepositoryImpl#0" />
+            <element signature="method#delete#0;class#TokenRepositoryImpl#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/emailSender/service/SignUpService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="12" column="45" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/emailSender/dto/UserDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/emailSender/service/SignUpServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="50" column="28" selection-start-line="50" selection-start-column="28" selection-end-line="50" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/emailSender/util/exception/AuthenticationException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/emailSender/config/ApplicationContextConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="85" column="33" selection-start-line="85" selection-start-column="33" selection-end-line="85" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring|EmailSendingRegister</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.17378497" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
