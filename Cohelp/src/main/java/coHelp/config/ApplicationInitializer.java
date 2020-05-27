@@ -1,7 +1,5 @@
 package coHelp.config;
 
-import coHelp.config.ApplicationContextConfig;
-import coHelp.config.LocalizationConfig;
 import coHelp.config.security.WebSecurityConfig;
 import org.springframework.web.context.ContextLoaderListener;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
@@ -39,6 +37,8 @@ public class ApplicationInitializer extends AbstractAnnotationConfigDispatcherSe
         dispatcher.addMapping("/");
         dispatcher.setInitParameter("contextClass", appContext.getClass().getName());
         servletContext.addListener(new ContextLoaderListener(appContext));
+        // UTF8 Charactor Filter.
+        FilterRegistration.Dynamic fr = servletContext.addFilter("encodingFilter", CharacterEncodingFilter.class);
 
     }
 }

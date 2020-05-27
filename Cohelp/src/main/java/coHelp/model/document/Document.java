@@ -10,6 +10,7 @@ import lombok.extern.slf4j.Slf4j;
 import javax.annotation.processing.Generated;
 import javax.persistence.*;
 import java.io.File;
+import java.io.Serializable;
 
 @Data
 @SuperBuilder
@@ -22,7 +23,7 @@ import java.io.File;
         strategy = InheritanceType.JOINED
 )
 @Slf4j
-public class Document {
+public class Document implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

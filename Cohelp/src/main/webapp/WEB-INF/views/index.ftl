@@ -1,5 +1,6 @@
 <#ftl encoding="utf-8">
 <#assign  security=JspTaglibs["/WEB-INF/security.tld"] />
+<#import "spring.ftl" as spring />
 
 <!DOCTYPE html>
 
@@ -53,23 +54,23 @@
     <div class="row  col-12">
         <div class="card mx-auto my-sm-5" style="width: 18rem;">
             <div class="card-body">
-                <h5 class="card-title text-center ">Наши волонтеры</h5>
+                <h5 class="card-title text-center "><@spring.message 'main.page.volunteers'/></h5>
                 <h1 class="text-center text-primary">765</h1>
                 <div class="form-row text-center">
                     <div class="col-12">
-                        <a href="#" class="btn btn-warning stretched-link text-white">Перейти</a>
+                        <a href="#" class="btn btn-warning stretched-link text-white"><@spring.message 'main.page.proceed'/></a>
                     </div>
                 </div>
             </div>
         </div>
         <div class="card mx-auto my-sm-5" style="width: 18rem;">
             <div class="card-body">
-                <h5 class="card-title text-center">Мероприятия</h5>
+                <h5 class="card-title text-center"><@spring.message 'main.page.events'/></h5>
                 <h1 class="text-center color text-primary">765</h1>
                 <div class="col-center">
                     <div class="form-row text-center">
                         <div class="col-12">
-                            <a href="#" class="btn btn-warning stretched-link text-white">Перейти</a>
+                            <a href="#" class="btn btn-warning stretched-link text-white"><@spring.message 'main.page.proceed'/></a>
                         </div>
                     </div>
                 </div>

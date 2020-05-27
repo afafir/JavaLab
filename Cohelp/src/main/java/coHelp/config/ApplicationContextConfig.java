@@ -1,5 +1,6 @@
 package coHelp.config;
 
+import bell.oauth.discord.main.OAuthBuilder;
 import coHelp.model.Messages;
 import coHelp.model.Visitor;
 import coHelp.scope.BeanFactory;
@@ -153,5 +154,13 @@ public class ApplicationContextConfig {
     @Bean
     public static BeanFactoryPostProcessor beanFactoryPostProcessor() {
         return new BeanFactory();
+    }
+
+    @Bean
+    public OAuthBuilder oAuthBuilder() {
+        OAuthBuilder builder = new OAuthBuilder("715147738177732661", "aBpAiU2aeMnwEOIKNmCkQUI2pwD8HU4I")
+                .setScopes(new String[]{"connections", "guilds", "email"})
+                .setRedirectURI("http://localhost:8080/discord");
+        return builder;
     }
 }

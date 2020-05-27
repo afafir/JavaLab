@@ -1,5 +1,6 @@
 package coHelp.repository;
 
+import coHelp.dto.DocumentInformationDto;
 import coHelp.model.user.User;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
@@ -43,6 +44,19 @@ public class UserRepositoryJpaImpl implements UserRepository {
     @Override
     public List<User> findAll() {
         return entityManager.createQuery("SELECT user FROM User user", User.class).getResultList();
+
+    }
+
+    @Override
+    public Optional<DocumentInformationDto> findInfo(Long id){
+        Query query = entityManager.createNamedQuery("findInformation").setParameter("userId", id);
+        DocumentInformationDto documentInformationDto;
+        try{
+            documentInformationDto = (DocumentInformationDto) query.getSingleResult();
+        }catch (NoResultException nre){
+            return Optional.empty();
+        }
+        return Optional.of(documentInformationDto);
 
     }
 

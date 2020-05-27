@@ -1,19 +1,23 @@
 package coHelp.contoller;
 
+import coHelp.config.security.details.UserDetailsImpl;
+import coHelp.dto.TaskGetDto;
 import coHelp.exception.ResourceNotFoundException;
 import coHelp.model.Visitor;
 import coHelp.model.task.Task;
+import coHelp.model.user.Consumer;
 import coHelp.model.user.User;
 import coHelp.service.TaskService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.ExceptionHandler;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.awt.*;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -44,10 +48,26 @@ public class TaskController {
     @RequestMapping(value = "/tasks", method = RequestMethod.GET)
     public ModelAndView getTasksPage() {
         ModelAndView modelAndView = new ModelAndView("tasks");
-        List<Task> taskList = taskService.getActiveTasks();
+        List<TaskGetDto> taskList = taskService.getActiveTasks();
         modelAndView.addObject("tasks", taskList);
         return modelAndView;
     }
+
+    @PreAuthorize("hasAuthority('VOLUNTEER')")
+    @RequestMapping(value = "/tasks/district", method = RequestMethod.GET)
+    public @ResponseBody List<TaskGetDto> getTasksForUserDistrict(Authentication authentication){
+        User user = ((coHelp.config.security.details.UserDetailsImpl) authentication.getPrincipal()).getUser();
+        return taskService.getTasksForUserDistrict(user);
+    }
+
+
+    @PreAuthorize("hasAuthority('VOLUNTEER')")
+    @RequestMapping(value = "/tasks/distance", method = RequestMethod.GET)
+    public @ResponseBody List<TaskGetDto> getTasksForDistance(@RequestParam Long km,Authentication authentication){
+        User user = ((coHelp.config.security.details.UserDetailsImpl) authentication.getPrincipal()).getUser();
+        return taskService.getTaskForDistance(km, user);
+    }
+
 
 
 }

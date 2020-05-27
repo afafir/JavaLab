@@ -4,11 +4,15 @@ package coHelp.config.security;
 
 import coHelp.config.security.details.UserDetailsServiceImpl;
 import coHelp.filter.CustomFilter;
+import coHelp.service.FacebookConnectionSignUp;
+import org.hibernate.internal.build.AllowPrintStacktrace;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -21,9 +25,16 @@ import org.springframework.security.web.authentication.rememberme.JdbcTokenRepos
 import org.springframework.security.web.authentication.rememberme.PersistentTokenRepository;
 import org.springframework.security.web.authentication.www.BasicAuthenticationFilter;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
-import org.springframework.session.jdbc.config.annotation.web.http.EnableJdbcHttpSession;
+import org.springframework.social.connect.ConnectionFactoryLocator;
+import org.springframework.social.connect.UsersConnectionRepository;
+import org.springframework.social.connect.mem.InMemoryUsersConnectionRepository;
+import org.springframework.social.connect.support.ConnectionFactoryRegistry;
+import org.springframework.social.connect.web.ProviderSignInController;
+import org.springframework.social.facebook.connect.FacebookConnectionFactory;
+import org.springframework.web.context.annotation.SessionScope;
 import org.springframework.web.filter.CharacterEncodingFilter;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+
 
 import javax.sql.DataSource;
 
@@ -32,6 +43,7 @@ import javax.sql.DataSource;
 @Configuration
 @ComponentScan(basePackages = {"coHelp"})
 @EnableGlobalMethodSecurity(prePostEnabled = true)
+@EnableAspectJAutoProxy
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     /*
@@ -65,6 +77,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     }*/
 
 
+    @Value("26cadcbcde462ad1b097be2008aa5603")
+    String appSecret;
+
+    @Value("945068059277455")
+    String appId;
+
+
     @Autowired
     @Qualifier(value = "userDetailsServiceImpl")
     private UserDetailsService userDetailsService;
@@ -78,16 +97,16 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        //super.configure(auth);
         auth.userDetailsService(userDetailsService).passwordEncoder(passwordEncoder);
     }
 
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        //  super.configure(http);
-        http.authorizeRequests().and().
-                rememberMe().rememberMeParameter("remember").tokenRepository(persistentTokenRepository());
+        http.authorizeRequests()
+                .antMatchers("/login*","/signin/**","/signup/**").permitAll()
+                .and()
+                .rememberMe().rememberMeParameter("remember").tokenRepository(persistentTokenRepository());
         http.logout()
                 .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
                 .logoutSuccessUrl("/signIn")
@@ -114,6 +133,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         jdbcTokenRepository.setDataSource(dataSource);
         return jdbcTokenRepository;
     }
+
 
 
 }

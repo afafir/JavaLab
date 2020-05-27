@@ -1,6 +1,6 @@
 package coHelp.service;
 
-import coHelp.dto.TaskDto;
+import coHelp.dto.TaskPostDto;
 import coHelp.model.task.State;
 import coHelp.model.task.Task;
 import coHelp.model.task.Type;
@@ -20,9 +20,9 @@ public class TaskConsumerServiceImpl implements TaskConsumerService {
     UserRepository userRepository;
 
     @Override
-    public Task createTask(TaskDto taskDto) {
-        Task task = Task.builder().description(taskDto.getDescription()).state(State.ACTIVE).build();
-        switch (taskDto.getType()) {
+    public Task createTask(TaskPostDto taskPostDto) {
+        Task task = Task.builder().description(taskPostDto.getDescription()).state(State.ACTIVE).build();
+        switch (taskPostDto.getType()) {
             case "walking":
                 task.setType(Type.PET_WALKING);
                 break;
@@ -33,7 +33,7 @@ public class TaskConsumerServiceImpl implements TaskConsumerService {
                 task.setType(Type.MEDICINES);
                 break;
         }
-        task.setConsumer((Consumer) userRepository.find(taskDto.getConsumer()).get());
+        task.setConsumer((Consumer) userRepository.find(taskPostDto.getConsumer()).get());
         return taskRepository.save(task);
     }
 

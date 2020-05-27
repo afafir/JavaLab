@@ -1,4 +1,5 @@
 <#assign  security=JspTaglibs["/WEB-INF/security.tld"] />
+<#import "spring.ftl" as spring />
 
 <!DOCTYPE html>
 <html lang="ru">
@@ -31,7 +32,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header text-center"><h1>Войти</h1></div>
+                    <div class="card-header text-center"><h1><@spring.message 'signIn.page.signIn'/></h1></div>
                     <div class="card-body">
                         <form action="signIn" method="post">
                             <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
@@ -44,7 +45,7 @@
                             </div>
 
                             <div class="form-group row">
-                                <label for="password" class="col-md-4 col-form-label text-md-right">Пароль</label>
+                                <label for="password" class="col-md-4 col-form-label text-md-right"><@spring.message 'signIn.page.password'/></label>
                                 <div class="col-md-6">
                                     <input type="password" id="password" class="form-control" name="password" required>
                                 </div>
@@ -62,14 +63,16 @@
 
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-warning">
-                                    Войти
+                                    <@spring.message 'signIn.page.signIn'/>
                                 </button>
                             </div>
                         </form>
-                    </div>
+                        <a class="btn btn-primary" href="https://discord.com/api/oauth2/authorize?client_id=715147738177732661&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Fdiscord&response_type=code&scope=identify%20email%20connections%20guilds">SignIn with Discord</a>
 
+                    </div>
                 </div>
             </div>
+
         </div>
     </div>
 </main>

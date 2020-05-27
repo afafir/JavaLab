@@ -8,6 +8,7 @@ import coHelp.service.ProfileService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import javassist.NotFoundException;
 import lombok.SneakyThrows;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
@@ -38,6 +39,7 @@ public class ProfileController {
     @RequestMapping(value = "/profile", method = RequestMethod.GET)
     public String getPage(Authentication authentication, Model model) {
         Long id = ((UserDetailsImpl) authentication.getPrincipal()).getUser().getId();
+        log.debug("user loaded profile");
        model.addAttribute("user", profileService.getProfile(id));
         return "profile";
     }
@@ -65,4 +67,13 @@ public class ProfileController {
             throw new IllegalArgumentException();
         } else return objectMapper.writeValueAsString("success");
     }
+
+
+
+
+
+
+
+    private static final Logger log = Logger.getLogger(ProfileController.class);
+
 }

@@ -1,7 +1,7 @@
 package coHelp.contoller;
 
 import coHelp.config.security.details.UserDetailsImpl;
-import coHelp.dto.TaskDto;
+import coHelp.dto.TaskPostDto;
 import coHelp.model.task.Task;
 import coHelp.model.user.User;
 import coHelp.service.TaskConsumerService;
@@ -41,8 +41,8 @@ class TaskConsumerController {
 
     @PreAuthorize("hasAuthority('CONSUMER')")
     @RequestMapping(value = "/profile/create")
-    public String createTask(@ModelAttribute TaskDto taskDto) {
-        Task task = taskConsumerService.createTask(taskDto);
+    public String createTask(@ModelAttribute TaskPostDto taskPostDto) {
+        Task task = taskConsumerService.createTask(taskPostDto);
         return "redirect:/task?id=" + task.getId();
     }
 

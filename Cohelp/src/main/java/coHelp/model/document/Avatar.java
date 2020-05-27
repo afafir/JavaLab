@@ -9,6 +9,7 @@ import lombok.experimental.SuperBuilder;
 import javax.persistence.Entity;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
+import java.io.Serializable;
 
 @EqualsAndHashCode(callSuper = true)
 @AllArgsConstructor
@@ -20,7 +21,7 @@ import javax.persistence.Table;
         name = "findByOwner",
         query = "SELECT avatar FROM Avatar avatar WHERE avatar.owner = :user "
 )
-public class Avatar extends Document {
+public class Avatar extends Document implements Serializable {
 
 
 

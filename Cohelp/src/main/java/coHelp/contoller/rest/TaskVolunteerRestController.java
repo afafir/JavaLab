@@ -2,6 +2,7 @@ package coHelp.contoller.rest;
 
 import coHelp.config.security.jwt.authentication.UserDetailsImpl;
 import coHelp.model.task.Task;
+import coHelp.model.user.Consumer;
 import coHelp.model.user.User;
 import coHelp.model.user.Volunteer;
 import coHelp.service.TaskService;
@@ -9,11 +10,14 @@ import coHelp.service.TaskVolunteerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.AccessDeniedException;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
 import javax.swing.text.html.Option;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -25,7 +29,7 @@ public class TaskVolunteerRestController {
     @Autowired
     TaskService taskService;
 
-    @RequestMapping(value = "/task/accept/{taskId}", method = RequestMethod.PUT)
+    @RequestMapping(value = "/rest/task/accept/{taskId}", method = RequestMethod.PUT)
     public ResponseEntity<Task> acceptTask(@PathVariable(value = "taskId") Long taskId) {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         UserDetailsImpl userDetails = (UserDetailsImpl) authentication.getPrincipal();
@@ -37,7 +41,7 @@ public class TaskVolunteerRestController {
     }
 
 
-    @RequestMapping(value = "/task/confirm/{taskId}", method = RequestMethod.PUT)
+    @RequestMapping(value = "/rest/task/confirm/{taskId}", method = RequestMethod.PUT)
     public ResponseEntity<Task> confirmTask(@RequestParam(value = "taskId") Long id) {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         UserDetailsImpl userDetails = (UserDetailsImpl) authentication.getPrincipal();
@@ -50,5 +54,7 @@ public class TaskVolunteerRestController {
         }
         return ResponseEntity.ok(task.get());
     }
+
+
 
 }

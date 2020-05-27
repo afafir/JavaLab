@@ -7,6 +7,7 @@ import java.util.UUID;
 
 
 @Scope("task")
+@Component
 public class TaskText {
     String textForPage;
 

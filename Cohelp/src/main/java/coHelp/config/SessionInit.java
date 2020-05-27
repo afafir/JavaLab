@@ -7,18 +7,14 @@ import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.session.jdbc.config.annotation.web.http.EnableJdbcHttpSession;
 import org.springframework.session.web.context.AbstractHttpSessionApplicationInitializer;
 import org.springframework.transaction.PlatformTransactionManager;
+import org.springframework.web.context.annotation.SessionScope;
 
 import javax.sql.DataSource;
 
 @Configuration
 @EnableJdbcHttpSession
+@SessionScope
 class SessionInit extends AbstractHttpSessionApplicationInitializer {
 
-    @Autowired
-    private DataSource dataSource;
 
-    @Bean
-    public PlatformTransactionManager transactionManager() {
-        return new DataSourceTransactionManager(dataSource);
-    }
 }

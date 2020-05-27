@@ -1,10 +1,8 @@
 package coHelp.model.user;
 
 import coHelp.model.task.Task;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import lombok.*;
 import lombok.experimental.SuperBuilder;
 
 import javax.persistence.*;
@@ -16,6 +14,8 @@ import java.util.List;
 @Entity
 @Data
 @SuperBuilder
+@ToString(exclude = "tasks")
+@JsonIgnoreProperties(value = "tasks")
 @Table(name = "project_consumer", schema = "cohelp1")
 public class Consumer extends User implements Serializable {
 

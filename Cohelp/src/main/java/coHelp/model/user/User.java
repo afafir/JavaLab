@@ -17,10 +17,14 @@ import java.io.Serializable;
 @NoArgsConstructor
 @Entity
 @Table(name = "project_user", schema = "cohelp1")
-@NamedQuery(
-        name = "findByEmail",
-        query = "SELECT user FROM User user WHERE user.email = :email "
-)
+@NamedQueries({
+        @NamedQuery(name = "findByEmail",
+        query = "SELECT user FROM User user WHERE user.email = :email "),
+        @NamedQuery(name = "findInformation",
+        query = "select new coHelp.dto.DocumentInformationDto(user.email, (sum (avatar.size))/1024) From User user left join user.avatar " + "" +
+                "as avatar where user.id=:userId group by user.id")
+})
+
 @Inheritance(
         strategy = InheritanceType.JOINED
 )
@@ -43,7 +47,7 @@ public class User implements Serializable {
     @Enumerated(EnumType.STRING)
     private State state;
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "id_avatar")
     private Avatar avatar;
     public Volunteer toVolunteer() {

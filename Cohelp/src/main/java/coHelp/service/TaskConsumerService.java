@@ -1,10 +1,10 @@
 package coHelp.service;
 
-import coHelp.dto.TaskDto;
+import coHelp.dto.TaskPostDto;
 import coHelp.model.task.Task;
 
 public interface TaskConsumerService {
-    Task createTask(TaskDto taskDto);
+    Task createTask(TaskPostDto taskPostDto);
 
     Task acceptTask(Task task);
 

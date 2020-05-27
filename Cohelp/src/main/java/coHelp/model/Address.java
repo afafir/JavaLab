@@ -26,4 +26,9 @@ public class Address implements Serializable {
     private String house;
     @OneToOne(mappedBy = "address", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private User user;
+
+
+    public String getStringAddress (){
+        return city+" "+district+" "+street+" "+house;
+    }
 }

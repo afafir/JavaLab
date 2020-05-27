@@ -56,7 +56,7 @@ public class ProfileServiceImpl implements ProfileService {
                         .surname(user.getEmail())
                         .phone(user.getPhone())
                         .role(user.getRole())
-                        .avatarLink(user.getAvatar() == null ? "resources/user_image/default.jpg" : "resources/user_image"+ "/" + user.getAvatar().getFileName()+user.getAvatar().getExtension())
+                        .avatarLink(user.getAvatar() == null ? "user_image/default.jpg" : "user_image"+ "/" + user.getAvatar().getFileName()+user.getAvatar().getExtension())
                         .build();
             } else return ConsumerDto.builder()
                     .id(user.getId())
@@ -80,7 +80,7 @@ public class ProfileServiceImpl implements ProfileService {
 
     }
 
-    private static final String STORAGE_PATH = "C:\\java\\JavaLab\\Cohelp\\src\\main\\webapp\\WEB-INF\\resources\\user_image";
+    private static final String STORAGE_PATH = "C:\\resources\\user_image";
 
 
     @SneakyThrows
@@ -97,6 +97,7 @@ public class ProfileServiceImpl implements ProfileService {
         }
         multipartFile.transferTo(new File(path));
         Avatar avatar;
+        user = userRepository.find(user.getId()).get();
         if (avatarOptional.isPresent()) {
             //delete current file
             avatar = avatarOptional.get();
@@ -105,13 +106,13 @@ public class ProfileServiceImpl implements ProfileService {
             avatar.setSourceFile(toSave);
             avatar.setPath(toSave.toPath().toString());
             avatar.setFileName(toSave.getName());
+            user.setAvatar(avatar);
            // avatar = (Avatar) documentService.updateDocument(avatar, toSave);
         } else {
             avatar = Avatar.builder()
                     .fileName(multipartFile.getName())
                     .owner(user)
                     .sourceFile(toSave).build();
-            user = userRepository.find(user.getId()).get();
             user.setAvatar(avatar);
         }
 

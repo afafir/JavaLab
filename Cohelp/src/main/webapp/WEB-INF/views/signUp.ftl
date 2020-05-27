@@ -36,7 +36,7 @@
                 <div class="card">
                     <div class="card-header text-center"><h1><@spring.message 'signUp.page.register'/></h1></div>
                     <div class="card-body">
-                        <form action="signUp" method="post">
+                        <form action="signUp" method="post" onsubmit="return Validate()">
                             <div class="form-group row">
                                 <label for="name" class="col-md-4 col-form-label text-md-right"><@spring.message 'signUp.page.name'/></label>
                                 <div class="col-md-6">
@@ -89,7 +89,7 @@
                             </div>
 
                             <div class="form-group row">
-                                <label for="tel" class="col-md-4 col-form-label text-md-right"><@spring.message 'signUp.page.name'/></label>
+                                <label for="tel" class="col-md-4 col-form-label text-md-right"><@spring.message 'signUp.page.tel'/></label>
                                 <div class="col-md-6">
                                     <input type="tel" id="tel" class="form-control" name="tel"
                                            pattern="\+7\-[0-9]{3}\-[0-9]{3}\-[0-9]{2}\-[0-9]{2}" required>
@@ -118,7 +118,7 @@
 
 
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-warning">
+                                <button type="submit" class="btn btn-warning" >
                                     <@spring.message 'signUp.page.register'/>
                                 </button>
                             </div>
@@ -134,7 +134,24 @@
     </div>
 </main>
 <script src="resources/js/city.js"></script>
-
+<script>
+    /**
+     * @return {boolean}
+     */
+    function Validate()
+    {
+        if (!/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test($('#email').val()))
+        {
+            alert("Введите верный e-mail");
+            return (false)
+        }
+        if ($('#password').val().length < 6) {
+            alert("Пароль должен быть длиннее 6 символов");
+            return (false)
+        }
+        return true;
+    }
+</script>
 
 </body>
 </html>

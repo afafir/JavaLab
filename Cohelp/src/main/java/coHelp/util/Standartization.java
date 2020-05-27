@@ -7,6 +7,9 @@ import ru.redcom.lib.integration.api.client.dadata.DaDataClientFactory;
 import ru.redcom.lib.integration.api.client.dadata.DaDataException;
 import ru.redcom.lib.integration.api.client.dadata.dto.Address;
 
+import java.util.AbstractMap;
+import java.util.Map;
+
 
 @Service
 public class Standartization {
@@ -20,4 +23,29 @@ public class Standartization {
         System.out.println("cleaned address: " + a);
         return a;
     }
+
+    public Map.Entry<Double, Double> getCoord(String address) throws DaDataException {
+        Address address1 = dadata.cleanAddress(address);
+        //ширина и долгота
+        return new AbstractMap.SimpleEntry<Double, Double>(address1.getGeoLat(), address1.getGeoLon());
+    }
+
+
+    //cos(d) = sin(φА)·sin(φB) + cos(φА)·cos(φB)·cos(λА − λB),
+    //L = d·R, r=6371
+    public Double getDistance(Map.Entry<Double, Double> coord1, Map.Entry<Double, Double> coord2) throws DaDataException {
+        Double firstLatitude = (Double) coord1.getKey();
+        Double firstLongitude = (Double) coord1.getValue();
+        Double secondLatitude = (Double) coord2.getKey();
+        Double secondLongitude = (Double) coord2.getValue();
+        double radian = Math.sin(firstLatitude) * Math.sin(secondLatitude) +
+                     Math.cos(firstLatitude)*Math.cos(secondLatitude)*Math.cos(firstLongitude-secondLongitude);
+        return 6371*Math.acos(radian);
+    }
+
+
+
+
+
+
 }

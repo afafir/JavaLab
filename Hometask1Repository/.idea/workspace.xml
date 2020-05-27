@@ -2,222 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e55ed79a-8b90-40a6-a9bc-89e270d762af" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/aspect/LoggingAspect.aj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/config/webSocketConfig/HandshakeInterceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/config/webSocketConfig/WebSocketConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/resources/js/chatStomp.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/views/chatStomp.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WebSocketRoomChat/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WebSocketRoomChat/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WebSocketRoomChat/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WebSocketRoomChat/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WebSocketRoomChat/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WebSocketRoomChat/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WebSocketRoomChat/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WebSocketRoomChat/WebSocketRoomChat.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WebSocketRoomChat/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WebSocketRoomChat/src/main/java/chat/config/ApplicationConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WebSocketRoomChat/src/main/java/chat/config/WebSocketConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WebSocketRoomChat/src/main/java/chat/controller/ChatController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WebSocketRoomChat/src/main/java/chat/controller/ChatsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WebSocketRoomChat/src/main/java/chat/controller/IndexController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WebSocketRoomChat/src/main/java/chat/controller/SignInController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WebSocketRoomChat/src/main/java/chat/controller/SignUpController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WebSocketRoomChat/src/main/java/chat/dto/MessageDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WebSocketRoomChat/src/main/java/chat/dto/UserDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WebSocketRoomChat/src/main/java/chat/handlers/AuthHandshakeHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WebSocketRoomChat/src/main/java/chat/handlers/WebSocketMessagesHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WebSocketRoomChat/src/main/java/chat/model/Chat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WebSocketRoomChat/src/main/java/chat/model/Message.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WebSocketRoomChat/src/main/java/chat/model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WebSocketRoomChat/src/main/java/chat/repository/ChatRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WebSocketRoomChat/src/main/java/chat/repository/MessageRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WebSocketRoomChat/src/main/java/chat/repository/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WebSocketRoomChat/src/main/java/chat/service/ChatService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WebSocketRoomChat/src/main/java/chat/service/ChatServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WebSocketRoomChat/src/main/java/chat/service/MessageService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WebSocketRoomChat/src/main/java/chat/service/MessageServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WebSocketRoomChat/src/main/java/chat/service/SignInService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WebSocketRoomChat/src/main/java/chat/service/SignInServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WebSocketRoomChat/src/main/java/chat/service/SignUpService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WebSocketRoomChat/src/main/java/chat/service/SignUpServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WebSocketRoomChat/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WebSocketRoomChat/src/main/webapp/WEB-INF/dispatcherServlet-servlet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WebSocketRoomChat/src/main/webapp/WEB-INF/views/chat.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WebSocketRoomChat/src/main/webapp/WEB-INF/views/chats.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WebSocketRoomChat/src/main/webapp/WEB-INF/views/signIn.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WebSocketRoomChat/src/main/webapp/WEB-INF/views/signUp.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../downloading1/src/main/test.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../webSocketChat/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../webSocketChat/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../webSocketChat/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../webSocketChat/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../webSocketChat/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../webSocketChat/webSocketChat.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/aspect/EmailAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/aspect/EmailAspect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/config/ApplicationContextConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/config/ApplicationContextConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/config/security/SecurityWebApplicationInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/config/security/SecurityWebApplicationInitializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/config/security/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/config/security/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/config/security/details/UserDetailsImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/config/security/details/UserDetailsImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/config/security/details/UserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/config/security/details/UserDetailsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/config/security/jwt/filter/JwtAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/config/security/jwt/filter/JwtAuthenticationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/config/security/jwt/provider/JwtAuthenticationProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/config/security/jwt/provider/JwtAuthenticationProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/contoller/ChatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/contoller/ChatController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/contoller/ProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/contoller/ProfileController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/contoller/RootController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/contoller/RootController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/contoller/SignInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/contoller/SignInController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/contoller/SignUpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/contoller/SignUpController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/contoller/TaskConsumerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/contoller/TaskConsumerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cohelp/.idea/artifacts/Cohelp_war_exploded2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/contoller/UserDocInfController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/dto/DocumentInformationDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/repository/jdbc/TaskRepositoryJdbcTemplateImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/views/infoDto.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cohelp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/config/ApplicationInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/config/ApplicationInitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/config/LocalizationConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/config/LocalizationConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/config/SessionInit.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/config/SessionInit.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/contoller/TaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/contoller/TaskController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/contoller/TaskVolunteerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/contoller/TaskVolunteerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/contoller/VolunteerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/contoller/VolunteerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/contoller/rest/MessagesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/contoller/rest/MessagesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/contoller/rest/ProfileRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/contoller/rest/ProfileRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/contoller/rest/SignInRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/contoller/rest/SignInRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/contoller/rest/SignUpRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/contoller/rest/SignUpRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/contoller/rest/TaskConsumerRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/contoller/rest/TaskConsumerRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/contoller/rest/TaskVolunteerRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/contoller/rest/TaskVolunteerRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/dto/SignInDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/dto/SignInDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/dto/TaskDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/dto/TaskDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/dto/user/ConsumerDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/dto/user/ConsumerDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/dto/user/VolunteerDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/dto/user/VolunteerDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/exception/ResourceNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/exception/ResourceNotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/model/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/model/Address.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/model/Chat.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/model/Chat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/model/Mail.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/model/Mail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/model/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/model/Message.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/model/Token.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/model/Token.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/model/task/State.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/model/task/State.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/model/task/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/model/task/Task.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/model/user/Consumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/model/user/Consumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/dto/SignUpDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/dto/SignUpDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/model/document/Avatar.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/model/document/Avatar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/model/document/Document.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/model/document/Document.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/model/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/model/user/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/model/user/Volunteer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/model/user/Volunteer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/repository/AddressRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/repository/AddressRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/repository/AddressRepositoryJpaImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/repository/AddressRepositoryJpaImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/repository/ChatRepositoryJpaImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/repository/ChatRepositoryJpaImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/repository/CrudRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/repository/CrudRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/repository/MessageRepositoryJpaImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/repository/MessageRepositoryJpaImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/repository/TaskRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/repository/TaskRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/repository/TokenRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/repository/TokenRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/repository/TokenRepositoryJpaImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/repository/TokenRepositoryJpaImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/repository/VolunteerRepositoryJpaImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/repository/VolunteerRepositoryJpaImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/scope/TaskScope.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/scope/TaskScope.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/service/ChatService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/service/ChatService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/service/ChatServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/service/ChatServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/service/ProfileService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/service/ProfileService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/repository/UserRepositoryJpa.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/repository/UserRepositoryJpa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/repository/UserRepositoryJpaImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/repository/UserRepositoryJpaImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/service/ProfileServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/service/ProfileServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/service/SignInServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/service/SignInServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/service/SignUpService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/service/SignUpService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/service/SignUpServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/service/SignUpServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/service/Standartization.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/util/Standartization.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/service/TaskConsumerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/service/TaskConsumerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/service/TaskConsumerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/service/TaskConsumerServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/service/TaskService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/service/TaskService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/service/TaskServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/service/TaskServiceImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/service/TaskVolunteerServiceImppl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/java/coHelp/service/TaskVolunteerServiceImppl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/resources/META-INF/persistence.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/dispatcherServlet-servlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/dispatcherServlet-servlet.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/resources/css/bootstrap-grid.css" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/resources/css/bootstrap-grid.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/resources/css/bootstrap-grid.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/resources/css/bootstrap-grid.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/resources/css/bootstrap-grid.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/resources/css/bootstrap-grid.min.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/resources/css/bootstrap-reboot.css" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/resources/css/bootstrap-reboot.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/resources/css/bootstrap-reboot.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/resources/css/bootstrap-reboot.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/resources/css/bootstrap-reboot.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/resources/css/bootstrap-reboot.min.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/resources/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/resources/css/bootstrap.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/resources/css/bootstrap.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/resources/css/bootstrap.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/resources/css/bootstrap.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/resources/css/bootstrap.min.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/resources/css/profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/resources/css/profile.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/resources/js/bootstrap.bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/resources/js/bootstrap.bundle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/resources/js/bootstrap.bundle.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/resources/js/bootstrap.bundle.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/resources/js/bootstrap.bundle.min.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/resources/js/bootstrap.bundle.min.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/resources/js/bootstrap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/resources/js/bootstrap.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/resources/js/bootstrap.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/resources/js/bootstrap.min.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/resources/js/bootstrap.min.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/resources/js/chat.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/resources/js/chat.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/resources/js/city.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/resources/js/city.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/views/Taskpage.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/views/Taskpage.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/views/anotherProfile.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/views/anotherProfile.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/views/chat.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/views/chat.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/views/header.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/views/header.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/resources/messages/messages_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/resources/messages/messages_en.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/resources/messages/messages_ru.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/resources/messages/messages_ru.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/views/index.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/views/index.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/views/profileConsumer.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/views/profileConsumer.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/views/profileVolunteer.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/views/profileVolunteer.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/views/signIn.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/views/signIn.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/views/signUp.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/views/signUp.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/views/volunteers.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/views/volunteers.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Cohelp/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../EmailSendingRegister/src/main/java/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/../EmailSendingRegister/src/main/java/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../EmailSendingRegister/src/main/java/emailSender/config/ApplicationContextConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../EmailSendingRegister/src/main/java/emailSender/config/ApplicationContextConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../EmailSendingRegister/src/main/java/emailSender/controller/ConfirmationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../EmailSendingRegister/src/main/java/emailSender/controller/ConfirmationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../EmailSendingRegister/src/main/java/emailSender/controller/SignInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../EmailSendingRegister/src/main/java/emailSender/controller/SignInController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../EmailSendingRegister/src/main/java/emailSender/controller/SignUpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../EmailSendingRegister/src/main/java/emailSender/controller/SignUpController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../EmailSendingRegister/src/main/java/emailSender/dto/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../EmailSendingRegister/src/main/java/emailSender/dto/UserDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../EmailSendingRegister/src/main/java/emailSender/listener/SpringContextServletContextListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/../EmailSendingRegister/src/main/java/emailSender/listener/SpringContextServletContextListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../EmailSendingRegister/src/main/java/emailSender/model/Mail.java" beforeDir="false" afterPath="$PROJECT_DIR$/../EmailSendingRegister/src/main/java/emailSender/model/Mail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../EmailSendingRegister/src/main/java/emailSender/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../EmailSendingRegister/src/main/java/emailSender/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../EmailSendingRegister/src/main/java/emailSender/repository/CrudRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../EmailSendingRegister/src/main/java/emailSender/repository/CrudRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../EmailSendingRegister/src/main/java/emailSender/repository/TokenRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../EmailSendingRegister/src/main/java/emailSender/repository/TokenRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../EmailSendingRegister/src/main/java/emailSender/repository/TokenRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../EmailSendingRegister/src/main/java/emailSender/repository/TokenRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../EmailSendingRegister/src/main/java/emailSender/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../EmailSendingRegister/src/main/java/emailSender/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../EmailSendingRegister/src/main/java/emailSender/repository/UserRepositoryJdbcTemplateImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../EmailSendingRegister/src/main/java/emailSender/repository/UserRepositoryJdbcTemplateImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../EmailSendingRegister/src/main/java/emailSender/service/EmailServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../EmailSendingRegister/src/main/java/emailSender/service/EmailServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../EmailSendingRegister/src/main/java/emailSender/service/SignInServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../EmailSendingRegister/src/main/java/emailSender/service/SignInServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../EmailSendingRegister/src/main/java/emailSender/service/SignUpService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../EmailSendingRegister/src/main/java/emailSender/service/SignUpService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../EmailSendingRegister/src/main/java/emailSender/service/SignUpServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../EmailSendingRegister/src/main/java/emailSender/service/SignUpServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../EmailSendingRegister/src/main/java/emailSender/util/exception/AuthenticationException.java" beforeDir="false" afterPath="$PROJECT_DIR$/../EmailSendingRegister/src/main/java/emailSender/util/exception/AuthenticationException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../EmailSendingRegister/src/main/java/emailSender/util/exception/ConfirmationException.java" beforeDir="false" afterPath="$PROJECT_DIR$/../EmailSendingRegister/src/main/java/emailSender/util/exception/ConfirmationException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../EmailSendingRegister/src/main/java/emailSender/util/exception/MailUtil/PreparerFreemarkerMail.java" beforeDir="false" afterPath="$PROJECT_DIR$/../EmailSendingRegister/src/main/java/emailSender/util/exception/MailUtil/PreparerFreemarkerMail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../EmailSendingRegister/src/main/java/emailSender/util/exception/UserNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/../EmailSendingRegister/src/main/java/emailSender/util/exception/UserNotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../EmailSendingRegister/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../EmailSendingRegister/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../EmailSendingRegister/src/main/resources/templates/email-template.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/../EmailSendingRegister/src/main/resources/templates/email-template.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../EmailSendingRegister/src/main/webapp/SignIn.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../EmailSendingRegister/src/main/webapp/SignIn.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../EmailSendingRegister/src/main/webapp/SignUp.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../EmailSendingRegister/src/main/webapp/SignUp.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MessageQueue/src/main/java/ru/javalab/queue/service/TaskServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MessageQueue/src/main/java/ru/javalab/queue/service/TaskServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../downloading1/src/main/java/downloader/aspect/EmailAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/../downloading1/src/main/java/downloader/aspect/EmailAspect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../downloading1/src/main/java/downloader/config/securityConf/config/SecurityWebApplicationInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../downloading1/src/main/java/downloader/config/securityConf/config/SecurityWebApplicationInitializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../downloading1/src/main/java/downloader/config/securityConf/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../downloading1/src/main/java/downloader/config/securityConf/config/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../downloading1/src/main/java/downloader/config/securityConf/details/UserDetailsImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../downloading1/src/main/java/downloader/config/securityConf/details/UserDetailsImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../downloading1/src/main/java/downloader/controllers/FileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../downloading1/src/main/java/downloader/controllers/FileController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../downloading1/src/main/java/downloader/controllers/RootController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../downloading1/src/main/java/downloader/controllers/RootController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../downloading1/src/main/java/downloader/controllers/SignInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../downloading1/src/main/java/downloader/controllers/SignInController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../downloading1/src/main/java/downloader/controllers/SignUpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../downloading1/src/main/java/downloader/controllers/SignUpController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../downloading1/src/main/java/downloader/dto/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../downloading1/src/main/java/downloader/dto/UserDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../downloading1/src/main/java/downloader/models/FileInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../downloading1/src/main/java/downloader/models/FileInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../downloading1/src/main/java/downloader/models/Mail.java" beforeDir="false" afterPath="$PROJECT_DIR$/../downloading1/src/main/java/downloader/models/Mail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../downloading1/src/main/java/downloader/models/user/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/../downloading1/src/main/java/downloader/models/user/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../downloading1/src/main/java/downloader/models/user/State.java" beforeDir="false" afterPath="$PROJECT_DIR$/../downloading1/src/main/java/downloader/models/user/State.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../downloading1/src/main/java/downloader/models/user/Token.java" beforeDir="false" afterPath="$PROJECT_DIR$/../downloading1/src/main/java/downloader/models/user/Token.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../downloading1/src/main/java/downloader/models/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../downloading1/src/main/java/downloader/models/user/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../downloading1/src/main/java/downloader/repositories/CrudRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../downloading1/src/main/java/downloader/repositories/CrudRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../downloading1/src/main/java/downloader/repositories/FileRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../downloading1/src/main/java/downloader/repositories/FileRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../downloading1/src/main/java/downloader/services/FileService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../downloading1/src/main/java/downloader/services/FileService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../downloading1/src/main/java/downloader/services/FileServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../downloading1/src/main/java/downloader/services/FileServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../downloading1/src/main/java/downloader/services/SignUpService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../downloading1/src/main/java/downloader/services/SignUpService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../downloading1/src/main/java/downloader/services/SignUpServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../downloading1/src/main/java/downloader/services/SignUpServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../downloading1/src/main/java/downloader/utils/MailFilePreparer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../downloading1/src/main/java/downloader/utils/MailFilePreparer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../downloading1/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../downloading1/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../downloading1/src/main/resources/templates/email-template.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/../downloading1/src/main/resources/templates/email-template.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../downloading1/src/main/webapp/WEB-INF/dispatcherServlet-servlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../downloading1/src/main/webapp/WEB-INF/dispatcherServlet-servlet.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../downloading1/src/main/webapp/WEB-INF/views/download-template.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/../downloading1/src/main/webapp/WEB-INF/views/download-template.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../downloading1/src/main/webapp/WEB-INF/views/index.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/../downloading1/src/main/webapp/WEB-INF/views/index.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../downloading1/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../downloading1/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../securityTest/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../securityTest/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../securityTest/src/main/java/security/config/ApplicationConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../securityTest/src/main/java/security/config/ApplicationConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../securityTest/src/main/java/security/config/securityConf/config/SecurityWebApplicationInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../securityTest/src/main/java/security/config/securityConf/config/SecurityWebApplicationInitializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../securityTest/src/main/java/security/config/securityConf/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../securityTest/src/main/java/security/config/securityConf/config/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../securityTest/src/main/java/security/config/securityConf/details/UserDetailsImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../securityTest/src/main/java/security/config/securityConf/details/UserDetailsImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../securityTest/src/main/java/security/config/securityConf/details/UserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../securityTest/src/main/java/security/config/securityConf/details/UserDetailsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../securityTest/src/main/java/security/controllers/RootController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../securityTest/src/main/java/security/controllers/RootController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../securityTest/src/main/java/security/controllers/SignInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../securityTest/src/main/java/security/controllers/SignInController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../securityTest/src/main/java/security/models/user/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/../securityTest/src/main/java/security/models/user/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../securityTest/src/main/java/security/models/user/State.java" beforeDir="false" afterPath="$PROJECT_DIR$/../securityTest/src/main/java/security/models/user/State.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../securityTest/src/main/java/security/models/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../securityTest/src/main/java/security/models/user/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../securityTest/src/main/java/security/repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../securityTest/src/main/java/security/repositories/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../securityTest/src/main/java/security/services/SignUpServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../securityTest/src/main/java/security/services/SignUpServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../securityTest/src/main/webapp/WEB-INF/views/index.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/../securityTest/src/main/webapp/WEB-INF/views/index.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../securityTest/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../securityTest/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../downloading1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../downloading1/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -259,11 +72,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/withTemplate/repositories/AuthorRepositoryJdbcTemplateImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="65" column="23" selection-start-line="65" selection-start-column="23" selection-end-line="65" selection-end-column="23" />
+            <state relative-caret-position="221">
+              <caret line="31" column="29" lean-forward="true" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1722#1739#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -295,7 +107,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
+            <state relative-caret-position="255">
               <caret line="25" column="19" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -428,7 +240,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -460,6 +272,23 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="withoutTemplate" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="repository" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Hometask1Repository" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="withoutTemplate" type="462c0819:PsiDirectoryNode" />
+              <item name="repositories" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="repository" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Hometask1Repository" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="withTemplate" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -482,11 +311,12 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="postgresql" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="database.console.LAST_STATE" value="true" />
@@ -560,16 +390,17 @@
       <workItem from="1584356898789" duration="55000" />
       <workItem from="1584358083752" duration="825000" />
       <workItem from="1588778658921" duration="916000" />
+      <workItem from="1590404002195" duration="722000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51421000" />
+    <option name="totallyTimeSpent" value="52143000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3167785" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.32147652" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -599,7 +430,7 @@
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="right" id="Maven" order="7" weight="0.3295302" />
-      <window_info active="true" anchor="right" id="Database" order="8" visible="true" weight="0.055033557" />
+      <window_info anchor="right" id="Database" order="8" visible="true" weight="0.055033557" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -690,6 +521,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/withTemplate/repositories/AuthorRepositoryJdbcTemplateImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="31" column="29" lean-forward="true" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Hometask1Repository.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -704,6 +545,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="646">
           <caret line="38" column="21" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="25" column="19" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/db.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="67" selection-start-line="3" selection-start-column="67" selection-end-line="3" selection-end-column="67" />
         </state>
       </provider>
     </entry>
@@ -738,34 +596,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="6" column="68" selection-start-line="6" selection-start-column="68" selection-end-line="6" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/db.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="67" selection-start-line="3" selection-start-column="67" selection-end-line="3" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="19" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/withTemplate/repositories/AuthorRepositoryJdbcTemplateImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="65" column="23" selection-start-line="65" selection-start-column="23" selection-end-line="65" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1722#1739#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

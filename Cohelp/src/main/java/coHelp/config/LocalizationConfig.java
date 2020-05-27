@@ -31,7 +31,7 @@ public class LocalizationConfig implements WebMvcConfigurer {
     public FreeMarkerConfigurer getConf() {
         final FreeMarkerConfigurer result = new FreeMarkerConfigurer();
         result.setTemplateLoaderPath("/WEB-INF/views");
-       // result.setDefaultEncoding("UTF-8");
+        result.setDefaultEncoding("UTF-8");
         return result;
     }
 
@@ -66,6 +66,7 @@ public class LocalizationConfig implements WebMvcConfigurer {
         return cookieLocaleResolver;
     }
 
+
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/resources/**").addResourceLocations("WEB-INF/resources/");
@@ -77,6 +78,8 @@ public class LocalizationConfig implements WebMvcConfigurer {
         localeChangeInterceptor.setParamName("lang");
         return localeChangeInterceptor;
     }
+
+
 
 
     @Bean

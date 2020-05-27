@@ -21,9 +21,9 @@ public class SignUpDto {
     private String street;
     private String house;
     private String tel;
-    @Email
+    @Email(message = "{Email.signUpDto.email}")
     private String email;
-    @Size(min = 6, max = 20)
+    @Size(min = 6, max = 20, message = "{Size.signUpDto.password}")
     private String password;
 
 }

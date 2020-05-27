@@ -14,7 +14,6 @@ import java.util.List;
 @NoArgsConstructor
 @Entity
 @Data
-
 @SuperBuilder
 @Table(name = "project_volunteer", schema = "cohelp1")
 public class Volunteer extends User implements Serializable {

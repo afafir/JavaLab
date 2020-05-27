@@ -2,7 +2,6 @@ package coHelp.repository;
 
 import coHelp.model.task.Task;
 import coHelp.model.user.Consumer;
-import coHelp.model.user.User;
 import coHelp.model.user.Volunteer;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;

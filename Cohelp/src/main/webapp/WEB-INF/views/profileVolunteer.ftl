@@ -2,7 +2,7 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="profile-img">
-                    <img src="${user.avatarLink}" alt=""/>
+                    <img src="http://127.0.0.1:1222/${user.avatarLink}" alt=""/>
                 </div>
             </div>
             <div class="file btn btn-lg btn-primary">
