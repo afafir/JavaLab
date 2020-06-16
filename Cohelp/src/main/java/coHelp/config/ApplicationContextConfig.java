@@ -1,10 +1,6 @@
 package coHelp.config;
 
 import bell.oauth.discord.main.OAuthBuilder;
-import coHelp.model.Messages;
-import coHelp.model.Visitor;
-import coHelp.scope.BeanFactory;
-import coHelp.scope.TaskText;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
@@ -148,12 +144,6 @@ public class ApplicationContextConfig {
     @Bean(name = "passwordEncoder")
     public PasswordEncoder getPasswordEncoder() {
         return new BCryptPasswordEncoder();
-    }
-
-
-    @Bean
-    public static BeanFactoryPostProcessor beanFactoryPostProcessor() {
-        return new BeanFactory();
     }
 
     @Bean

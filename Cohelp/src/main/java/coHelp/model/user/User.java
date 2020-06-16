@@ -61,7 +61,6 @@ public class User implements Serializable {
                 .xd("kek")
                 .state(state).build();
     }
-
     public Consumer toConsumer() {
         return Consumer.builder().address(this.address)
                 .email(this.email)

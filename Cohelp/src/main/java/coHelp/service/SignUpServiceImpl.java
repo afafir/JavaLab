@@ -69,7 +69,6 @@ public class SignUpServiceImpl implements SignUpService {
                     .token(UUID.randomUUID().toString())
                     .user(user).build();
             tokenRepository.save(token);
-
             //чтобы работал аспект
             signUpService.createMail(token);
             return true;

@@ -2,10 +2,7 @@ package coHelp.config.security;
 
 //import coHelp.filter.CustomFilter;
 
-import coHelp.config.security.details.UserDetailsServiceImpl;
-import coHelp.filter.CustomFilter;
-import coHelp.service.FacebookConnectionSignUp;
-import org.hibernate.internal.build.AllowPrintStacktrace;
+import coHelp.filter.LanguageFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
@@ -25,13 +22,6 @@ import org.springframework.security.web.authentication.rememberme.JdbcTokenRepos
 import org.springframework.security.web.authentication.rememberme.PersistentTokenRepository;
 import org.springframework.security.web.authentication.www.BasicAuthenticationFilter;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
-import org.springframework.social.connect.ConnectionFactoryLocator;
-import org.springframework.social.connect.UsersConnectionRepository;
-import org.springframework.social.connect.mem.InMemoryUsersConnectionRepository;
-import org.springframework.social.connect.support.ConnectionFactoryRegistry;
-import org.springframework.social.connect.web.ProviderSignInController;
-import org.springframework.social.facebook.connect.FacebookConnectionFactory;
-import org.springframework.web.context.annotation.SessionScope;
 import org.springframework.web.filter.CharacterEncodingFilter;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
@@ -119,7 +109,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .defaultSuccessUrl("/profile")
                 .failureUrl("/signIn?error")
                 .permitAll();
-       http.addFilterBefore(new CustomFilter(), BasicAuthenticationFilter.class);
+       http.addFilterBefore(new LanguageFilter(), BasicAuthenticationFilter.class);
         http.addFilterBefore(characterEncodingFilter, ChannelProcessingFilter.class);
     }
 

@@ -1,23 +1,17 @@
 package coHelp.contoller;
 
-import coHelp.config.security.details.UserDetailsImpl;
 import coHelp.dto.TaskGetDto;
 import coHelp.exception.ResourceNotFoundException;
-import coHelp.model.Visitor;
 import coHelp.model.task.Task;
-import coHelp.model.user.Consumer;
 import coHelp.model.user.User;
 import coHelp.service.TaskService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
-import java.awt.*;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 

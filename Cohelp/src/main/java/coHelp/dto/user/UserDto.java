@@ -27,4 +27,7 @@ public class UserDto {
     private Address address;
     private String avatarLink;
 
+
+
+
 }

@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
     import java.net.http.HttpRequest;
 @Component
-public class CustomFilter extends GenericFilterBean {
+public class LanguageFilter extends GenericFilterBean {
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
         if (request.getParameter("lang") != null) {

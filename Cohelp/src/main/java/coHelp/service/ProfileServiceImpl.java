@@ -47,28 +47,8 @@ public class ProfileServiceImpl implements ProfileService {
         if (optionalUser.isPresent()) {
             User user = optionalUser.get();
             if (user.getRole().equals(Role.VOLUNTEER)) {
-                return VolunteerDto.builder()
-                        .id(user.getId())
-                        .tasks((((Volunteer) user).getTasks()))
-                        .address(user.getAddress())
-                        .email(user.getEmail())
-                        .name(user.getName())
-                        .surname(user.getEmail())
-                        .phone(user.getPhone())
-                        .role(user.getRole())
-                        .avatarLink(user.getAvatar() == null ? "user_image/default.jpg" : "user_image"+ "/" + user.getAvatar().getFileName()+user.getAvatar().getExtension())
-                        .build();
-            } else return ConsumerDto.builder()
-                    .id(user.getId())
-                    .tasks(((Consumer) user).getTasks())
-                    .address(user.getAddress())
-                    .email(user.getEmail())
-                    .name(user.getName())
-                    .role(user.getRole())
-                    .surname(user.getEmail())
-                    .phone(user.getPhone())
-                    .avatarLink(user.getAvatar() == null ? "resources/user_image/default.jpg" : "resources/user_image/" + user.getAvatar().getFileName()+user.getAvatar().getExtension())
-                    .build();
+                return VolunteerDto.toVolunteerDto(user);
+            } else return ConsumerDto.toConsumerDto(user);
         } else throw new NotFoundException("Such user doesnt exist");
     }
 
